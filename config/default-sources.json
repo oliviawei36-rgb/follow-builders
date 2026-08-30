@@ -73,6 +73,14 @@
     { "name": "Dan Shipper", "handle": "danshipper" },
     { "name": "Aditya Agarwal", "handle": "adityaag" },
     { "name": "Sam Altman", "handle": "sama" },
-    { "name": "Claude", "handle": "claudeai" }
+    { "name": "Claude", "handle": "claudeai" },
+    { "name": "Harvey", "handle": "harvey" },
+    { "name": "Winston Weinberg", "handle": "winstonweinberg" },
+    { "name": "Gabe Pereyra", "handle": "gabepereyra" },
+    { "name": "Niko Grupen", "handle": "nikogrupen" },
+    { "name": "Julio Pereyra", "handle": "ItsJulioPereyra" },
+    { "name": "Spencer Poff", "handle": "spencerpoff" },
+    { "name": "Vasudha Rengarajan", "handle": "vtrengarajan" },
+    { "name": "Calvin Qi", "handle": "calvincongelado" }
   ]
 }
