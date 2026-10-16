@@ -1,0 +1,35 @@
+{
+  "initialLookbackDays": 90,
+  "dailyLookbackDays": 14,
+  "sourceTimeoutMs": 30000,
+  "searchQueries": [
+    {
+      "id": "models-en",
+      "name": "主题补漏｜全球模型发布",
+      "query": "new AI model release launch announcement",
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "id": "legal-en",
+      "name": "主题补漏｜法律 AI 英文",
+      "query": "legal AI model agent launch contract compliance privacy",
+      "module": "法律 AI 产品"
+    },
+    {
+      "id": "models-zh",
+      "name": "主题补漏｜中国模型发布",
+      "query": "大模型 新模型 发布 上线",
+      "module": "中国大模型厂商资讯"
+    },
+    {
+      "id": "legal-zh",
+      "name": "主题补漏｜法律大模型中文",
+      "query": "法律大模型 法律智能体 发布 合同 合规",
+      "module": "中国大模型厂商资讯"
+    }
+  ],
+  "acceptanceUrls": [
+    "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "https://autoclaw.z.ai/blog/model/GLM-Legal/"
+  ]
+}

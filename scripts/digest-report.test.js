@@ -13,7 +13,7 @@ test('failure-only opening excludes successfully empty and unverified sources',(
 test('requested source removals and podcast additions are effective',async()=>{
  const local=JSON.parse(await readFile(new URL('../config/local-sources.json',import.meta.url)));
  const defaults=JSON.parse(await readFile(new URL('../config/default-sources.json',import.meta.url)));
- assert.equal(local.blogs.length+defaults.blogs.length,29);
+ assert.equal(local.blogs.length+defaults.blogs.length,32);
  assert.equal(defaults.podcasts.length,8);
  assert.ok(!local.blogs.some(s=>s.name.startsWith('中国法律科技｜') || s.name.includes('百度千帆')));
  assert.ok(local.podcasts.some(s=>s.name==='Lex Fridman Podcast'));

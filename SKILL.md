@@ -15,6 +15,53 @@ Philosophy: follow builders with original opinions, not influencers who regurgit
 (X/Twitter posts and YouTube transcripts) is fetched centrally and served via
 a public feed. Users only need API keys if they choose Telegram or email delivery.
 
+## Codex scheduled delivery (local customization)
+
+For this installation, the existing Codex heartbeat handles scheduled in-chat delivery.
+Use `scripts/daily-digest.js prepare` at or after 08:00 Asia/Shanghai. It checks
+per-source delivery receipts, preserves undelivered content, rejects stale feeds,
+and refreshes the existing GitHub Twitter workflow when needed. Never treat an old
+whole-day success flag as evidence that Twitter was delivered.
+
+Read the returned `inputPath` JSON and follow its remix prompts. Save the exact
+final digest, then run `daily-digest.js stage --input <inputPath> --digest <file>
+--sources <x,blogs,podcasts actually included> --thread-id <delivery thread>`.
+Output the staged file verbatim in the normal final reply. A later run reconciles
+success against the actual final response; staging alone is not success.
+
+`sourceStatus` is authoritative: `error` and `stale` mean unavailable, not no updates.
+Healthy empty feeds mean no new updates. Partial failures do not block other sources
+and must not be marked as complete. Ignore only genuinely non-fatal issues for the
+sources that remain usable. Never include stale X data as current news.
+
+Current product context: WiseDPO — user agreement generation, privacy policy
+generation, and a privacy assessment Agent. Use these when explaining relevance.
+
+
+Daily modules, in order: X; AI播客; AI 公司博客及产品更新; 法律 AI 产品; 律所与法务AI实践; 中国大模型厂商资讯.
+At the beginning, print only genuine failures from healthReport.failures, with the module, source and short reason. Omit this line when there are no failures. A successful empty scan is not a failure. Follow the user-custom digest-intro.md for this formatting.
+Source subscriptions: 35 X accounts, 8 podcasts and 32 website/page sources as of 2026-10-16. Public podcast overrides in config/local-sources.json include Lex Fridman Podcast and All-In; Lex covers all topics. Removed Chinese legal-tech sources and Baidu Qianfan must not be restored from old caches.
+
+## Model releases and discovery (local customization)
+
+The user maintains the fork's source lists. Apply authorized source changes in
+`config/default-sources.json` and `config/local-sources.json`, and sync runtime
+changes to the existing GitHub repository. These local rules override upstream
+instructions that source lists are immutable or web research is always forbidden.
+
+For daily blog delivery, read [references/model-discovery.md](references/model-discovery.md)
+and complete the payload's discovery plan before remixing. The daily web search is
+limited to finding model/legal AI releases and verifying official sources. Ordinary
+X and podcast remixing still uses only the prepared content. Do not invent facts.
+
+`config/discovery-policy.json` defines first-scan 90-day and subsequent 14-day
+windows, four bilingual topic searches and known-release acceptance URLs.
+`generate-coverage.js` runs the subscribed website scan and collects unverified
+search leads in the cloud. `discovery.js complete` verifies and merges topic search
+results locally. Discovery failures join the existing opening failure line;
+successful empty searches do not. Important general model releases do not need to
+contain legal keywords. Keep removed sources excluded and keep the six modules.
+
 ## Detecting Platform
 
 Before doing anything, detect which platform you're running on by running:
@@ -315,7 +362,7 @@ Read `~/.follow-builders/config.json` for user preferences.
 ### Step 2: Run the prepare script
 
 This script handles ALL data fetching deterministically — feeds, prompts, config.
-You do NOT fetch anything yourself.
+The model-discovery step below is the only additional research phase; ordinary remixing uses the prepared JSON.
 
 ```bash
 cd ${CLAUDE_SKILL_DIR}/scripts && node prepare-digest.js 2>/dev/null
@@ -332,6 +379,11 @@ The script outputs a single JSON blob with everything you need:
 If the script fails entirely (no JSON output), tell the user to check their
 internet connection. Otherwise, use whatever content is in the JSON.
 
+### Step 2b: Complete model discovery
+
+If the JSON has an incomplete discovery plan and blogs are requested, follow
+`references/model-discovery.md`, then read the updated inputPath JSON.
+
 ### Step 3: Check for content
 
 If `stats.podcastEpisodes` is 0 AND `stats.xBuilders` is 0, tell the user:
@@ -339,8 +391,7 @@ If `stats.podcastEpisodes` is 0 AND `stats.xBuilders` is 0, tell the user:
 
 ### Step 4: Remix content
 
-**Your ONLY job is to remix the content from the JSON.** Do NOT fetch anything
-from the web, visit any URLs, or call any APIs. Everything is in the JSON.
+After completing model discovery, remix only the resulting JSON. Do not add unsupported facts during the writing phase.
 
 Read the prompts from the `prompts` field in the JSON:
 - `prompts.digest_intro` — overall framing rules
@@ -363,7 +414,7 @@ Assemble the digest following `prompts.digest_intro`.
 - NEVER invent or fabricate content. Only use what's in the JSON.
 - Every piece of content MUST have its URL. No URL = do not include.
 - Do NOT guess job titles. Use the `bio` field or just the person's name.
-- Do NOT visit x.com, search the web, or call any API.
+- Ordinary remixing must not visit x.com or add unverified web content. The preceding model-discovery phase may search and verify official release pages.
 
 ### Step 5: Apply language
 
@@ -414,10 +465,9 @@ Just output the digest directly.
 When the user says something that sounds like a settings change, handle it:
 
 ### Source Changes
-The source list is managed centrally and cannot be modified by users.
-If a user asks to add or remove sources, tell them: "The source list is curated
-centrally and updates automatically. If you'd like to suggest a source, you can
-open an issue at https://github.com/zarazhangrui/follow-builders."
+The source lists in this customized installation are user-managed. Make authorized
+changes in the local configuration and existing cloud fork. Check actual discovery
+and fetch results; a configured URL is not proof of successful coverage.
 
 ### Schedule Changes
 - "Switch to weekly/daily" → Update `frequency` in config.json

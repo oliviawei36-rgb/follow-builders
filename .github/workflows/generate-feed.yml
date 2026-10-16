@@ -11,7 +11,7 @@ on:
         required: false
         default: 'all'
         type: choice
-        options: [all, tweets-only, podcasts-only, blogs-only]
+        options: [all, tweets-only, podcasts-only, blogs-only, coverage-only]
 
 concurrency:
   group: follow-builders-feeds
@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: cd scripts && npm ci
       - name: Run regression checks
-        run: node --test scripts/generate-feed.test.js
+        run: node --test scripts/*.test.js
       - name: Fetch Twitter independently
         id: tweets
         if: github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'tweets-only'
@@ -46,6 +46,13 @@ jobs:
         if: "!cancelled() && (github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'blogs-only')"
         continue-on-error: true
         run: node scripts/generate-feed.js --blogs-only
+      - name: Fetch website coverage and search leads independently
+        id: coverage
+        if: "!cancelled() && (github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'blogs-only' || inputs.mode == 'coverage-only')"
+        continue-on-error: true
+        env:
+          FOLLOW_BUILDERS_SOURCE_CONCURRENCY: '8'
+        run: node scripts/generate-coverage.js
       - name: Fetch podcasts when configured
         id: podcasts
         if: "!cancelled() && (github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'podcasts-only')"
@@ -64,6 +71,8 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add feed-x.json feed-podcasts.json feed-blogs.json state-feed.json
           if [ -f health-x.json ]; then git add health-x.json; fi
+          if [ -f feed-coverage.json ]; then git add feed-coverage.json; fi
+          if [ -f state-sites.json ]; then git add state-sites.json; fi
           git diff --cached --quiet || git commit -m 'chore: update feeds [skip ci]'
           git push
       - name: Report each source independently
@@ -72,6 +81,7 @@ jobs:
           TWEETS: ${{ steps.tweets.outcome }}
           BLOGS: ${{ steps.blogs.outcome }}
           PODCASTS: ${{ steps.podcasts.outcome }}
+          COVERAGE: ${{ steps.coverage.outcome }}
         run: |
-          echo "Twitter: $TWEETS; Blogs: $BLOGS; Podcasts: $PODCASTS" >> "$GITHUB_STEP_SUMMARY"
-          if [ "$TWEETS" = 'failure' ] || [ "$BLOGS" = 'failure' ] || [ "$PODCASTS" = 'failure' ]; then exit 1; fi
+          echo "Twitter: $TWEETS; Blogs: $BLOGS; Podcasts: $PODCASTS; Coverage: $COVERAGE" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$TWEETS" = 'failure' ] || [ "$BLOGS" = 'failure' ] || [ "$PODCASTS" = 'failure' ] || [ "$COVERAGE" = 'failure' ]; then exit 1; fi

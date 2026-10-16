@@ -21,6 +21,7 @@ import { existsSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
 import { fetchLocalBlogs } from './fetch-local-blogs.js';
+import { discoveryPlan, mergeDiscovery } from './discovery.js';
 import { fetchLocalPodcasts } from './fetch-local-podcasts.js';
 import { MODULES, moduleFor, buildReport } from './digest-report.js';
 import { inspectFeed, usable } from './feed-health.js';
@@ -49,7 +50,7 @@ const REMOTE_FETCH_TIMEOUT_MS = Number(
   process.env.FOLLOW_BUILDERS_REMOTE_TIMEOUT_MS || 8000
 );
 const LOCAL_BLOGS_TIMEOUT_MS = Number(
-  process.env.FOLLOW_BUILDERS_LOCAL_TIMEOUT_MS || 45000
+  process.env.FOLLOW_BUILDERS_LOCAL_TIMEOUT_MS || 180000
 );
 
 // -- Fetch helpers -----------------------------------------------------------
@@ -95,12 +96,17 @@ export async function main({ excludeSources = [], emit = true } = {}) {
     }
   }
 
+  // Prefer the precomputed cloud scan so delivery does not repeat the same free site requests.
+  const coverage = excludeSources.includes('blogs') ? null : await fetchJSON('https://raw.githubusercontent.com/oliviawei36-rgb/follow-builders/main/feed-coverage.json');
+  const currentCoverage = coverage?.sourceHealth && Date.now() - Date.parse(coverage.generatedAt) < 30 * 3600000 ? coverage : null;
+  const discovery = excludeSources.includes('blogs') ? null : await discoveryPlan();
+
   // 2. Fetch all three feeds
   const [feedX, feedPodcasts, feedBlogs, localBlogFeed, localPodcastFeed, xHealthFeed] = await Promise.all([
     excludeSources.includes('x') ? null : fetchJSON(FEED_X_URL),
     excludeSources.includes('podcasts') ? null : fetchJSON(FEED_PODCASTS_URL),
     excludeSources.includes('blogs') ? null : fetchJSON(FEED_BLOGS_URL),
-    excludeSources.includes('blogs') ? { blogs: [], errors: [] } : fetchLocalBlogs({ signal: AbortSignal.timeout(LOCAL_BLOGS_TIMEOUT_MS) }),
+    excludeSources.includes('blogs') ? { blogs: [], errors: [] } : currentCoverage || fetchLocalBlogs({ signal: AbortSignal.timeout(LOCAL_BLOGS_TIMEOUT_MS) }),
     excludeSources.includes('podcasts') ? { podcasts: [], errors: [], sourceHealth: [] } : fetchLocalPodcasts({ signal: AbortSignal.timeout(LOCAL_BLOGS_TIMEOUT_MS) }),
     excludeSources.includes('x') ? null : fetchJSON('https://raw.githubusercontent.com/oliviawei36-rgb/follow-builders/main/health-x.json')
   ]);
@@ -160,7 +166,7 @@ export async function main({ excludeSources = [], emit = true } = {}) {
   const defaults = JSON.parse(await readFile(join(scriptRoot, 'config/default-sources.json'), 'utf8'));
   const localSources = JSON.parse(await readFile(join(scriptRoot, 'config/local-sources.json'), 'utf8'));
   const activeConfig = { ...defaults, blogs: [...defaults.blogs, ...localSources.blogs] };
-  for (const article of mergedBlogs) article.module = moduleFor(article.name, activeConfig);
+  for (const article of mergedBlogs) article.module ||= moduleFor(article.name, activeConfig);
   for (const episode of currentPodcasts) episode.module = 'AI播客';
   const remoteBlogHealth = feedBlogs?.sourceHealth || defaults.blogs.map(source => {
     const problems = (feedBlogs?.errors || []).filter(error => error.includes(source.name) || error.includes(source.indexUrl));
@@ -169,6 +175,9 @@ export async function main({ excludeSources = [], emit = true } = {}) {
   const sharedPodcastHealth = defaults.podcasts.filter(source=>source.fetchMethod!=='public').map(source => ({ name:source.name, module:'AI播客', status: !usable(inspectFeed(feedPodcasts,'podcasts')) ? 'error' : upstreamPodcasts.some(episode=>episode.name===source.name) ? 'ok' : 'unverified', reason: !usable(inspectFeed(feedPodcasts,'podcasts')) ? 'Shared podcast feed unavailable or stale' : 'Shared feed does not provide per-podcast fetch outcomes' }));
   const xRecords = xHealthFeed?.sources && Date.now()-Date.parse(xHealthFeed.generatedAt)<30*3600000 ? xHealthFeed.sources : defaults.x_accounts.map(source=>({name:source.name,module:'X',status:usable(sourceStatus.x) ? 'unverified':'error',reason:usable(sourceStatus.x) ? 'Shared feed does not provide per-account fetch outcomes' : 'Twitter feed unavailable or stale'}));
   const healthReport = buildReport({ config:activeConfig, records:[...xRecords,...remoteBlogHealth,...(localBlogFeed?.sourceHealth || []),...sharedPodcastHealth,...(localPodcastFeed?.sourceHealth || [])], excluded:excludeSources });
+
+  const siteFailures = healthReport.failures.filter(item => !['X', 'AI播客'].includes(item.module));
+  if (siteFailures.length && !excludeSources.includes('blogs')) sourceStatus.blogs = { ...sourceStatus.blogs, status: 'partial', reason: siteFailures.map(item => `${item.name}: ${item.reason}`).join('; ') };
 
   // 3. Load prompts with priority: user custom > remote (GitHub) > local default
   //
@@ -247,6 +256,10 @@ export async function main({ excludeSources = [], emit = true } = {}) {
     errors: errors.length > 0 ? errors : undefined
   };
 
+  if (discovery) {
+    output.discovery = { ...discovery, cloudLeads: currentCoverage?.discovery || null };
+    if (discovery.completed && discovery.result) mergeDiscovery(output, discovery.result);
+  }
   if (emit) console.log(JSON.stringify(output, null, 2));
   return output;
 }

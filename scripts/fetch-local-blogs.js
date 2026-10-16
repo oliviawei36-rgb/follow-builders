@@ -8,9 +8,9 @@ import { promisify } from "util";
 const SCRIPT_DIR = decodeURIComponent(new URL(".", import.meta.url).pathname);
 const SOURCES_PATH = join(SCRIPT_DIR, "..", "config", "local-sources.json");
 const STATE_PATH = join(homedir(), ".follow-builders", "local-source-state.json");
-const LOOKBACK_HOURS = 72;
-const MAX_CANDIDATES_PER_SOURCE = 12;
-const MAX_ARTICLES_PER_SOURCE = 3;
+const LOOKBACK_HOURS = 14 * 24;
+const MAX_CANDIDATES_PER_SOURCE = 60;
+const MAX_ARTICLES_PER_SOURCE = 60;
 const REQUEST_TIMEOUT_MS = Number(
   process.env.FOLLOW_BUILDERS_REQUEST_TIMEOUT_MS || 6000
 );
@@ -129,7 +129,7 @@ function normalizeUrl(href, indexUrl) {
   }
 }
 
-function discoverCandidates(html, source) {
+export function discoverCandidates(html, source) {
   const candidates = [];
   const seen = new Set();
   const hrefRegex = /href=["']([^"']+)["']/gi;
@@ -210,7 +210,7 @@ function metaContent(html, key, attribute = "property") {
   return "";
 }
 
-function extractArticle(html, url, sourceName) {
+export function extractArticle(html, url, sourceName) {
   const structured = parseJsonLd(html).find((entry) => {
     const type = entry?.["@type"];
     return type === "Article" || type === "BlogPosting" || type === "NewsArticle";
@@ -221,7 +221,7 @@ function extractArticle(html, url, sourceName) {
     metaContent(html, "og:title") ||
     (h1 ? stripHtml(h1[1]) : "") ||
     "Untitled";
-  const publishedAt =
+  let publishedAt =
     structured?.datePublished ||
     metaContent(html, "article:published_time") ||
     metaContent(html, "date", "name") ||
@@ -236,6 +236,12 @@ function extractArticle(html, url, sourceName) {
     html.match(/<main[^>]*>([\s\S]*?)<\/main>/i)?.[1] ||
     html;
   const content = stripHtml(articleBody).slice(0, 50000);
+  if (!publishedAt) {
+    const visibleDate = content.match(/\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2}, \d{4}\b/i)?.[0];
+    const timeDate = articleBody.match(/<time[^>]*datetime=["']([^"']+)["']/i)?.[1];
+    const date = timeDate || (visibleDate ? `${visibleDate} 00:00:00 GMT` : null);
+    if (date && Number.isFinite(Date.parse(date))) publishedAt = new Date(date).toISOString();
+  }
 
   return {
     source: "blog",
@@ -249,14 +255,20 @@ function extractArticle(html, url, sourceName) {
   };
 }
 
-function isRecent(publishedAt) {
+export function isRecent(publishedAt, days = LOOKBACK_HOURS / 24, now = Date.now()) {
   if (!publishedAt) return true;
   const timestamp = new Date(publishedAt).getTime();
   if (!Number.isFinite(timestamp)) return true;
-  return timestamp >= Date.now() - LOOKBACK_HOURS * 60 * 60 * 1000;
+  return timestamp >= now - days * 24 * 60 * 60 * 1000 && timestamp <= now + 24 * 60 * 60 * 1000;
 }
 
-function matchesKeywords(article, source) {
+export function matchesKeywords(article, source) {
+  if (source.includeModelReleases && source.watchPage) return true;
+  if (source.includeModelReleases) {
+    const title = article.title || "";
+    const body = `${title} ${article.description || ""} ${article.content || ""}`;
+    if (/(?:\b(?:GLM|Qwen|Kimi|DeepSeek|Hunyuan|LLM|GPT|Claude|Jev)\b|\bAI model\b|模型)/i.test(title) && /(?:introduc|releas|launch|new model|发布|上线|升级|推出|更新)/i.test(body)) return true;
+  }
   if (source.includeTitleKeywords?.length) {
     const title = article.title.toLowerCase();
     if (!source.includeTitleKeywords.some((keyword) => title.includes(keyword.toLowerCase()))) {
@@ -265,7 +277,14 @@ function matchesKeywords(article, source) {
   }
   if (!source.includeKeywords?.length) return true;
   const searchable = `${article.title} ${article.description} ${article.content}`.toLowerCase();
-  return source.includeKeywords.some((keyword) => searchable.includes(keyword.toLowerCase()));
+  return source.includeKeywords.some((keyword) => {
+    const value = keyword.toLowerCase();
+    if (/^[a-z ]+$/.test(value)) {
+      const escaped = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return new RegExp(`(?:^|[^a-z])${escaped}(?:$|[^a-z])`, "i").test(searchable);
+    }
+    return searchable.includes(value);
+  });
 }
 
 function contentHash(article) {
@@ -274,17 +293,17 @@ function contentHash(article) {
     .digest("hex");
 }
 
-async function readState() {
+async function readState(path = STATE_PATH) {
   try {
-    return JSON.parse(await readFile(STATE_PATH, "utf-8"));
+    return JSON.parse(await readFile(path, "utf-8"));
   } catch {
     return {};
   }
 }
 
-async function writeState(state) {
+async function writeState(state, path = STATE_PATH) {
   await mkdir(join(homedir(), ".follow-builders"), { recursive: true });
-  await writeFile(STATE_PATH, `${JSON.stringify(state, null, 2)}\n`, "utf-8");
+  await writeFile(path, `${JSON.stringify(state, null, 2)}\n`, "utf-8");
 }
 
 function requestSignal(signal, timeoutMs) {
@@ -323,36 +342,40 @@ export async function fetchHtml(url, { signal, timeoutMs = REQUEST_TIMEOUT_MS } 
   }
 }
 
-export async function fetchLocalBlogs({ signal } = {}) {
+export async function fetchLocalBlogs({ signal, sources: configuredSources, statePath = STATE_PATH, lookbackDays, now = Date.now() } = {}) {
   const errors = [];
   const blogs = [];
   const sourceHealth = [];
   let config;
-  const state = await readState();
+  const state = await readState(statePath);
+  state.__coverage ||= {};
   let stateChanged = false;
 
   try {
-    config = JSON.parse(await readFile(SOURCES_PATH, "utf-8"));
+    config = configuredSources ? { blogs: configuredSources } : JSON.parse(await readFile(SOURCES_PATH, "utf-8"));
   } catch (error) {
     return { blogs, errors: [`Local blogs: could not read sources: ${error.message}`] };
   }
 
-  const sources = config.blogs || [];
+  const sources = [...(config.blogs || [])].sort((a,b) => Number(!!b.priority) - Number(!!a.priority));
   let nextSourceIndex = 0;
 
   async function processSources() {
     while (nextSourceIndex < sources.length && !signal?.aborted) {
       const source = sources[nextSourceIndex];
       nextSourceIndex += 1;
-      const startCount = blogs.length;
+      const sourceSignal = signal;
+      const sourceDeadline = AbortSignal.timeout(Number(process.env.FOLLOW_BUILDERS_SOURCE_TIMEOUT_MS || 30000));
+      const articleSignal = sourceSignal ? AbortSignal.any([sourceSignal, sourceDeadline]) : sourceDeadline;
+      const days = lookbackDays ?? (state.__coverage[source.name]?.initialComplete ? 14 : 90);
       const startErrors = errors.length;
       const health = { name: source.name, module: source.module, checkedAt: new Date().toISOString(), status: 'no_updates', count: 0 };
     try {
       if (source.feedUrl) {
-        const xml = await fetchHtml(source.feedUrl, { signal });
+        const xml = await fetchHtml(source.feedUrl, { signal: articleSignal });
         if (!/<(?:rss|feed)\b/i.test(xml)) throw new Error('Response is not a valid RSS or Atom feed');
         const entries = parseSyndicationFeed(xml, source)
-          .filter((article) => article.content && isRecent(article.publishedAt))
+          .filter((article) => article.content && isRecent(article.publishedAt, days, now))
           .filter((article) => matchesKeywords(article, source))
           .slice(0, MAX_ARTICLES_PER_SOURCE);
         blogs.push(...entries.map(article => ({ ...article, module: source.module })));
@@ -360,7 +383,7 @@ export async function fetchLocalBlogs({ signal } = {}) {
       }
 
       const discoveryUrl = source.sitemapUrl || source.indexUrl;
-      const indexHtml = await fetchHtml(discoveryUrl, { signal });
+      const indexHtml = await fetchHtml(discoveryUrl, { signal: articleSignal });
       const candidates = source.sitemapUrl
         ? discoverSitemapCandidates(indexHtml, source)
         : discoverCandidates(indexHtml, source);
@@ -368,16 +391,18 @@ export async function fetchLocalBlogs({ signal } = {}) {
       let added = 0;
 
       for (const url of candidates) {
-        if (signal?.aborted) break;
+        if (articleSignal.aborted) { errors.push(`Local blog ${source.name}: source fetch deadline exceeded`); break; }
         try {
-          const article = extractArticle(await fetchHtml(url, { signal }), url, source.name);
-          if (!article.content || !isRecent(article.publishedAt) || !matchesKeywords(article, source)) continue;
+          const article = extractArticle(await fetchHtml(url, { signal: articleSignal }), url, source.name);
+          if (!article.content || !isRecent(article.publishedAt, days, now) || !matchesKeywords(article, source)) continue;
           if (source.watchPage) {
             const hash = contentHash(article);
             if (state[source.name] === hash) continue;
             state[source.name] = hash;
             stateChanged = true;
-            article.publishedAt = new Date().toISOString();
+            article.observedAt = new Date().toISOString();
+            article.timestampKind = "page_change_observed";
+            article.publishedAt = article.observedAt;
           }
           blogs.push({ ...article, module: source.module });
           added += 1;
@@ -393,6 +418,11 @@ export async function fetchLocalBlogs({ signal } = {}) {
       health.count = blogs.filter(article => article.name === source.name).length;
       health.status = ownErrors.length ? (health.count ? 'partial' : 'error') : health.count ? 'ok' : 'no_updates';
       if (ownErrors.length) health.reason = ownErrors.join('; ');
+      health.lookbackDays = days;
+      if (!ownErrors.length) {
+        state.__coverage[source.name] = { initialComplete: true, checkedAt: health.checkedAt, lookbackDays: days };
+        stateChanged = true;
+      }
       sourceHealth.push(health);
     }
     }
@@ -406,7 +436,7 @@ export async function fetchLocalBlogs({ signal } = {}) {
 
   if (stateChanged) {
     try {
-      await writeState(state);
+      await writeState(state, statePath);
     } catch (error) {
       errors.push(`Local blogs: could not save change-detection state: ${error.message}`);
     }

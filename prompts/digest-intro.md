@@ -57,3 +57,6 @@ Then organize content in this order:
 ### General
 - At the very end, add a line: "Generated through the Follow Builders skill: https://github.com/zarazhangrui/follow-builders"
 - Keep formatting clean and scannable — this will be read on a phone screen
+
+
+模型发布补漏：重要通用模型的新版本、结构化输出、文档处理、工具调用或Agent能力更新，不要求原文含“法律”才收录。每天先完成discovery主题检索并核对官方原文，再使用合并后的JSON生成摘要。同一事件跨语言或跨来源合并一次，遵守eventId和已投递URL去重。首次90天回溯发现的旧发布写明原发布日期，不能称为今天刚发布。页面变动时间不是模型发布时间。六个模块和开头只列失败的版式保持不变。

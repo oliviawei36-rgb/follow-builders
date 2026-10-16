@@ -1,6 +1,71 @@
 {
   "blogs": [
     {
+      "name": "TypeSafe AI 官方博客",
+      "indexUrl": "https://typesafe.ai/blog",
+      "sitemapUrl": "https://typesafe.ai/sitemap.xml",
+      "articlePrefixes": [
+        "https://typesafe.ai/blog/"
+      ],
+      "module": "AI 公司博客及产品更新",
+      "priority": true
+    },
+    {
+      "name": "中国大模型｜Z.ai 官方模型发布",
+      "indexUrl": "https://docs.z.ai/release-notes/new-released",
+      "articlePrefixes": [
+        "https://docs.z.ai/release-notes/new-released"
+      ],
+      "includeModelReleases": true,
+      "module": "中国大模型厂商资讯",
+      "priority": true,
+      "includeKeywords": [
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "合同",
+        "合规",
+        "隐私",
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy"
+      ],
+      "includeIndex": true,
+      "watchPage": true
+    },
+    {
+      "name": "中国大模型｜智谱 AutoClaw 英文",
+      "indexUrl": "https://autoclaw.z.ai/blog/",
+      "articlePrefixes": [
+        "https://autoclaw.z.ai/blog/model/"
+      ],
+      "excludeUrls": [
+        "https://autoclaw.z.ai/blog/model/"
+      ],
+      "includeModelReleases": true,
+      "module": "中国大模型厂商资讯",
+      "priority": true,
+      "includeKeywords": [
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "合同",
+        "合规",
+        "隐私",
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy"
+      ]
+    },
+    {
       "name": "Harvey Blog",
       "indexUrl": "https://www.harvey.ai/blog",
       "sitemapUrl": "https://www.harvey.ai/sitemap.xml",
@@ -277,9 +342,16 @@
         "监管",
         "案例库",
         "裁判文书",
-        "法律行业"
+        "法律行业",
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy"
       ],
-      "module": "中国大模型厂商资讯"
+      "module": "中国大模型厂商资讯",
+      "includeModelReleases": true
     },
     {
       "name": "中国大模型｜智谱 AutoClaw",
@@ -303,9 +375,17 @@
         "监管",
         "法条",
         "案例检索",
-        "法律大模型"
+        "法律大模型",
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy"
       ],
-      "module": "中国大模型厂商资讯"
+      "module": "中国大模型厂商资讯",
+      "includeModelReleases": true,
+      "priority": true
     },
     {
       "name": "中国大模型｜通义千问 Qwen",
@@ -328,7 +408,8 @@
         "合规",
         "隐私"
       ],
-      "module": "中国大模型厂商资讯"
+      "module": "中国大模型厂商资讯",
+      "includeModelReleases": true
     },
     {
       "name": "中国大模型｜DeepSeek 官方动态",
@@ -351,7 +432,8 @@
         "合规",
         "隐私"
       ],
-      "module": "中国大模型厂商资讯"
+      "module": "中国大模型厂商资讯",
+      "includeModelReleases": true
     },
     {
       "name": "中国大模型｜腾讯混元",
@@ -369,9 +451,16 @@
         "司法",
         "合同",
         "合规",
-        "隐私"
+        "隐私",
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy"
       ],
-      "module": "中国大模型厂商资讯"
+      "module": "中国大模型厂商资讯",
+      "includeModelReleases": true
     },
     {
       "name": "中国大模型｜火山方舟与豆包",
@@ -389,9 +478,16 @@
         "司法",
         "合同",
         "合规",
-        "隐私"
+        "隐私",
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy"
       ],
-      "module": "中国大模型厂商资讯"
+      "module": "中国大模型厂商资讯",
+      "includeModelReleases": true
     }
   ],
   "podcasts": [

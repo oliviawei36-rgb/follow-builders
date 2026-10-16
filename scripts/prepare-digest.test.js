@@ -32,7 +32,11 @@ test("fetchJSON returns null when the remote request exceeds its deadline", asyn
 test("prepare-digest emits valid degraded JSON when every network source times out", async () => {
   const { stdout } = await execFileAsync(
     process.execPath,
-    [join(SCRIPT_DIR, "prepare-digest.js")],
+    ["--import", "data:text/javascript," + encodeURIComponent(`globalThis.fetch = (_url, { signal }) => new Promise((_resolve, reject) => {
+      if (signal.aborted) return reject(signal.reason);
+      const keepAlive = setTimeout(() => reject(new Error('timeout mock failed')), 1000);
+      signal.addEventListener('abort', () => { clearTimeout(keepAlive); reject(signal.reason); }, { once: true });
+    });`), join(SCRIPT_DIR, "prepare-digest.js")],
     {
       env: {
         ...process.env,

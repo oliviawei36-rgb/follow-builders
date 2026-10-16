@@ -58,7 +58,8 @@ export async function reconcile() {
       day.sources[source] = {
         status: health.status === 'partial' ? 'partial' : health.status === 'empty' ? 'empty' : 'delivered',
         feedGeneratedAt: health.generatedAt, ...result.evidence,
-        urls: [...new Set([...(day.sources[source]?.urls || []), ...(receipt.urls[source] || [])])]
+        urls: [...new Set([...(day.sources[source]?.urls || []), ...(receipt.urls[source] || [])])],
+        eventIds: [...new Set([...(day.sources[source]?.eventIds || []), ...(receipt.eventIds?.[source] || [])])]
       };
     }
     day.status = ALL.every(s => completed(day.sources[s])) ? 'success' : 'partial';
@@ -145,6 +146,8 @@ async function prepare() {
     }
     const refresh = wanted.includes('x') && !has('--no-refresh') ? await refreshX() : undefined;
     const payload = await prepareDigest({ excludeSources: ALL.filter(s => !wanted.includes(s)), emit: false });
+    payload.deliveredBlogUrls = deliveredUrls.blogs;
+    payload.deliveredEventIds = [...new Set(Object.values(state.deliveredDates || {}).flatMap(day => day.sources?.blogs?.eventIds || []))];
     // Preserve undelivered articles across retries; local scraping has its own fetch-time deduplication.
     const pendingPath = join(ROOT, 'pending', `${date}.json`);
     const previous = await readJSON(pendingPath);
@@ -161,7 +164,7 @@ async function prepare() {
         }
         payload.x = [...byHandle.values()].filter(a => a.tweets.length);
       } else {
-        payload[key] = [...new Map(candidates.filter(item => !deliveredUrls[key].includes(item.url)).map(item => [item.url, item])).values()];
+        payload[key] = [...new Map(candidates.filter(item => !deliveredUrls[key].includes(item.url) && !(item.eventId && payload.deliveredEventIds.includes(item.eventId))).map(item => [item.url, item])).values()];
       }
     }
     payload.stats.xBuilders = payload.x.length;
@@ -189,6 +192,7 @@ async function stage() {
     const sources = selected().filter(s => usable(payload.sourceStatus?.[s]));
     if (!sources.length || sources.length !== selected().length) throw new Error('Cannot mark failed or stale sources as delivered');
     if (!has('--thread-id')) throw new Error('Delivery thread is required');
+    if (sources.includes('blogs') && payload.discovery && !payload.discovery.completed) throw new Error('Complete daily topic discovery before staging blogs');
     const date = shanghaiDate();
     const state = await reconcile();
     if (sources.some(source => completed(state.deliveredDates?.[date]?.sources?.[source]))) return { status: 'already_delivered', instruction: 'Prepare again to exclude completed sources; do not output this duplicate digest.' };
@@ -201,7 +205,8 @@ async function stage() {
     await mkdir(dirname(digestPath), { recursive: true });
     await writeFile(digestPath, digest + '\n', { mode: 0o600 });
     const urls = Object.fromEntries(sources.map(s => [s, s === 'x' ? (payload.x || []).flatMap(a => a.tweets.map(t => t.url)) : (payload[s] || []).map(t => t.url)]));
-    const receipt = { id, date, status: 'staged', stagedAt: new Date().toISOString(), threadId: option('--thread-id'), digestPath, sources, sourceStatus: payload.sourceStatus, urls };
+    const eventIds = { blogs: [...new Set((payload.blogs || []).map(item => item.eventId).filter(Boolean))] };
+    const receipt = { id, date, status: 'staged', stagedAt: new Date().toISOString(), threadId: option('--thread-id'), digestPath, sources, sourceStatus: payload.sourceStatus, urls, eventIds };
     await atomicJSON(join(RECEIPTS, `${id}.json`), receipt);
     return { status: 'staged', receiptId: id, digestPath, instruction: 'Output this exact file as a normal final reply. Success is recorded only when a later run verifies that final reply.' };
   } finally { await release(runId); }
