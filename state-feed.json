@@ -32,8 +32,246 @@
     "2110732878296612903": 1792154236611,
     "2110773803592937733": 1792154237035,
     "2110761908097945942": 1792154237035,
-    "2110761906588053621": 1792154237035
+    "2110761906588053621": 1792154237035,
+    "2110750421367287996": 1792155034954,
+    "2110866215765975050": 1792155035245,
+    "2110865799791714339": 1792155036041,
+    "2110817100096995332": 1792155036041,
+    "2110815456458412179": 1792155036740
   },
   "seenVideos": {},
-  "seenArticles": {}
+  "seenArticles": {
+    "https://www.anthropic.com/engineering/redesigning-source-control": 1792155038529,
+    "https://www.anthropic.com/engineering/how-we-contain-claude": 1792155039165,
+    "https://www.anthropic.com/engineering/april-23-postmortem": 1792155039831
+  },
+  "xUsers": {
+    "karpathy": {
+      "id": "33836629",
+      "name": "Andrej Karpathy",
+      "description": "",
+      "cachedAt": "2026-10-16T12:50:33.889Z"
+    },
+    "swyx": {
+      "id": "33521530",
+      "name": "swyx",
+      "description": "achieve ambition with intentionality, intensity, integrity & insanity.\n\naffiliations:\n- @smol_ai\n- @dxtipshq\n- @cognition\n- @aidotengineer\n- @latentspacepod",
+      "cachedAt": "2026-10-16T12:50:33.889Z"
+    },
+    "joshwoodward": {
+      "id": "206546319",
+      "name": "Josh Woodward",
+      "description": "VP, @Google @GoogleLabs @GeminiApp @GoogleAIStudio",
+      "cachedAt": "2026-10-16T12:50:33.889Z"
+    },
+    "bcherny": {
+      "id": "159337660",
+      "name": "Boris Cherny",
+      "description": "Claude @anthropicai",
+      "cachedAt": "2026-10-16T12:50:33.889Z"
+    },
+    "thsottiaux": {
+      "id": "1953337039510003712",
+      "name": "Tibo",
+      "description": "Codex & ChatGPT @OpenAI",
+      "cachedAt": "2026-10-16T12:50:33.889Z"
+    },
+    "petergyang": {
+      "id": "84490044",
+      "name": "Peter Yang",
+      "description": "Practical AI tutorials and interviews for busy people | Get my best AI skills and guides at https://t.co/6VAA6p81x6",
+      "cachedAt": "2026-10-16T12:50:33.993Z"
+    },
+    "thenanyu": {
+      "id": "16950370",
+      "name": "Nan Yu",
+      "description": "product, codex @openai. prev head of product @linear",
+      "cachedAt": "2026-10-16T12:50:33.993Z"
+    },
+    "realmadhuguru": {
+      "id": "1462843067208278021",
+      "name": "Madhu Guru",
+      "description": "Sr Director, AI at Meta; Prev: Google - Led Gemini, Veo, Nano Banana.",
+      "cachedAt": "2026-10-16T12:50:33.993Z"
+    },
+    "amandaaskell": {
+      "id": "756181721997987848",
+      "name": "Amanda Askell",
+      "description": "Philosopher & ethicist trying to make AI be good @AnthropicAI.\nPersonal account. All opinions come from my training data.",
+      "cachedAt": "2026-10-16T12:50:33.993Z"
+    },
+    "_catwu": {
+      "id": "974757274206978049",
+      "name": "cat",
+      "description": "claude code + cowork @anthropicai, prev: @dagster, @scale_ai",
+      "cachedAt": "2026-10-16T12:50:33.993Z"
+    },
+    "trq212": {
+      "id": "352806502",
+      "name": "Thariq",
+      "description": "Claude Code @anthropicai. prev YC W20, @spc, @medialab",
+      "cachedAt": "2026-10-16T12:50:34.094Z"
+    },
+    "googlelabs": {
+      "id": "163975783",
+      "name": "Google Labs",
+      "description": "Google’s home for our latest AI tools and experiments.",
+      "cachedAt": "2026-10-16T12:50:34.094Z"
+    },
+    "amasad": {
+      "id": "166138615",
+      "name": "Amjad Masad",
+      "description": "ceo @replit. civilizationist",
+      "cachedAt": "2026-10-16T12:50:34.094Z"
+    },
+    "rauchg": {
+      "id": "15540222",
+      "name": "Guillermo Rauch",
+      "description": "@vercel CEO",
+      "cachedAt": "2026-10-16T12:50:34.094Z"
+    },
+    "alexalbert__": {
+      "id": "1380719534970040322",
+      "name": "Alex Albert",
+      "description": "Research @AnthropicAI. Opinions are my own!",
+      "cachedAt": "2026-10-16T12:50:34.094Z"
+    },
+    "levie": {
+      "id": "914061",
+      "name": "Aaron Levie",
+      "description": "ceo @box - your business lives in content. unleash it with AI",
+      "cachedAt": "2026-10-16T12:50:34.212Z"
+    },
+    "ryolu_": {
+      "id": "18233920",
+      "name": "Ryo Lu",
+      "description": "Designed @Cursor_ai, @NotionHQ, @Stripe, built startups. I make a world where anyone can make software. Aspiring k-pop idol.",
+      "cachedAt": "2026-10-16T12:50:34.212Z"
+    },
+    "garrytan": {
+      "id": "11768582",
+      "name": "Garry Tan",
+      "description": "President & CEO @ycombinator —Founder @garryslist—Creator of GStack & GBrain—designer/engineer who helps founders—SF Dem accelerating the boom loop",
+      "cachedAt": "2026-10-16T12:50:34.212Z"
+    },
+    "mattturck": {
+      "id": "247785677",
+      "name": "Matt Turck",
+      "description": "VC at @FirstMarkCap.  Host: MAD Podcast; Organizer: Data Driven NYC, Author: MAD Landscape.",
+      "cachedAt": "2026-10-16T12:50:34.212Z"
+    },
+    "zarazhangrui": {
+      "id": "1472063616",
+      "name": "Zara Zhang",
+      "description": "Builder. Make something people want, then make people want it. Harvard’17. GitHub: https://t.co/KCuEajezlL \nYouTube: https://t.co/8xzbGWtf6w",
+      "cachedAt": "2026-10-16T12:50:34.212Z"
+    },
+    "nikunj": {
+      "id": "30405893",
+      "name": "Nikunj Kothari",
+      "description": "partner @fpvventures - investing in seed/A. previous: early hire @meter, @opendoor, @atlassian & others. love @shimoleejhaveri + 👦👧",
+      "cachedAt": "2026-10-16T12:50:34.328Z"
+    },
+    "steipete": {
+      "id": "25401953",
+      "name": "Peter Steinberger 🦞",
+      "description": "Polyagentmorous ClawFather. Came back from retirement to mess with AI and help a lobster take over the world.\n@OpenClaw🦞 + @OpenAI",
+      "cachedAt": "2026-10-16T12:50:34.328Z"
+    },
+    "danshipper": {
+      "id": "19829693",
+      "name": "Dan Shipper",
+      "description": "ceo @every | the only subscription you need to stay at the edge of AI",
+      "cachedAt": "2026-10-16T12:50:34.328Z"
+    },
+    "adityaag": {
+      "id": "974861",
+      "name": "Aditya Agarwal",
+      "description": "General Partner @SPC, Co-Founder @Bevel_Health | Ex: Early Eng @facebook, CTO @Dropbox, Board @Flipkart | Optimist, Builder, Dad",
+      "cachedAt": "2026-10-16T12:50:34.328Z"
+    },
+    "sama": {
+      "id": "1605",
+      "name": "Sam Altman",
+      "description": "The mission of OpenAI is to ensure that AGI benefits all of humanity",
+      "cachedAt": "2026-10-16T12:50:34.328Z"
+    },
+    "claudeai": {
+      "id": "1943306828697550848",
+      "name": "Claude",
+      "description": "Claude is an AI assistant built by @anthropicai to be safe, accurate, and secure. Talk to Claude on https://t.co/ZhTwG8d1e5 or download the app.",
+      "cachedAt": "2026-10-16T12:50:34.440Z"
+    },
+    "harvey": {
+      "id": "1636132366753349632",
+      "name": "Harvey",
+      "description": "AI for the world’s most complex legal work.",
+      "cachedAt": "2026-10-16T12:50:34.440Z"
+    },
+    "winstonweinberg": {
+      "id": "1574207887865413632",
+      "name": "Winston Weinberg",
+      "description": "building @harvey with my bud @gabepereyra",
+      "cachedAt": "2026-10-16T12:50:34.441Z"
+    },
+    "gabepereyra": {
+      "id": "1495870534260690946",
+      "name": "Gabe Pereyra",
+      "description": "building @harvey with my bud @winstonweinberg",
+      "cachedAt": "2026-10-16T12:50:34.441Z"
+    },
+    "nikogrupen": {
+      "id": "147615935",
+      "name": "Niko",
+      "description": "Head of Applied Research @harvey",
+      "cachedAt": "2026-10-16T12:50:34.441Z"
+    },
+    "itsjuliopereyra": {
+      "id": "1601992080464654336",
+      "name": "Julio Pereyra",
+      "description": "",
+      "cachedAt": "2026-10-16T12:50:34.525Z"
+    },
+    "spencerpoff": {
+      "id": "140465697",
+      "name": "Spencer Poff",
+      "description": "Building high-utility intelligent systems @harvey",
+      "cachedAt": "2026-10-16T12:50:34.525Z"
+    },
+    "vtrengarajan": {
+      "id": "3250990327",
+      "name": "Vasudha Rengarajan",
+      "description": "",
+      "cachedAt": "2026-10-16T12:50:34.525Z"
+    },
+    "calvincongelado": {
+      "id": "1145120873839337472",
+      "name": "Calvin Qi",
+      "description": "Memeber of Technical Staff @harvey. previously AI @glean, @SambaNovaAI",
+      "cachedAt": "2026-10-16T12:50:34.525Z"
+    }
+  },
+  "xSinceIds": {
+    "bcherny": "2110791698611855624",
+    "thsottiaux": "2110971985417441512",
+    "petergyang": "2110883805506711694",
+    "thenanyu": "2110830001440559382",
+    "amandaaskell": "2110737494119710896",
+    "rauchg": "2110957024934858815",
+    "levie": "2110975373219688624",
+    "garrytan": "2110841756090880215",
+    "mattturck": "2110799887239365012",
+    "zarazhangrui": "2110994667924050128",
+    "steipete": "2110795475075084471",
+    "danshipper": "2110831666587713810",
+    "adityaag": "2110779602453066224",
+    "harvey": "2110774445464015205",
+    "nikogrupen": "2110773803592937733"
+  },
+  "lastXRequestStats": {
+    "userLookupRequests": 7,
+    "userResourcesRead": 34,
+    "timelineRequests": 34,
+    "tweetResourcesRead": 38
+  }
 }
