@@ -1,0 +1,277 @@
+{
+  "generatedAt": "2026-10-16T13:36:03.110Z",
+  "sources": [
+    {
+      "name": "Andrej Karpathy",
+      "handle": "karpathy",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:35:59.667Z"
+    },
+    {
+      "name": "Swyx",
+      "handle": "swyx",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:35:59.760Z"
+    },
+    {
+      "name": "Josh Woodward",
+      "handle": "joshwoodward",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:35:59.839Z"
+    },
+    {
+      "name": "Boris Cherny",
+      "handle": "bcherny",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:35:59.932Z"
+    },
+    {
+      "name": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.022Z"
+    },
+    {
+      "name": "Peter Yang",
+      "handle": "petergyang",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.156Z"
+    },
+    {
+      "name": "Nan Yu",
+      "handle": "thenanyu",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.241Z"
+    },
+    {
+      "name": "Madhu Guru",
+      "handle": "realmadhuguru",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.339Z"
+    },
+    {
+      "name": "Amanda Askell",
+      "handle": "AmandaAskell",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.467Z"
+    },
+    {
+      "name": "Cat Wu",
+      "handle": "_catwu",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.565Z"
+    },
+    {
+      "name": "Thariq",
+      "handle": "trq212",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.658Z"
+    },
+    {
+      "name": "Google Labs",
+      "handle": "GoogleLabs",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.749Z"
+    },
+    {
+      "name": "Amjad Masad",
+      "handle": "amasad",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.837Z"
+    },
+    {
+      "name": "Guillermo Rauch",
+      "handle": "rauchg",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:00.956Z"
+    },
+    {
+      "name": "Alex Albert",
+      "handle": "alexalbert__",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.055Z"
+    },
+    {
+      "name": "Aaron Levie",
+      "handle": "levie",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.158Z"
+    },
+    {
+      "name": "Ryo Lu",
+      "handle": "ryolu_",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.246Z"
+    },
+    {
+      "name": "Garry Tan",
+      "handle": "garrytan",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.333Z"
+    },
+    {
+      "name": "Matt Turck",
+      "handle": "mattturck",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.448Z"
+    },
+    {
+      "name": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.557Z"
+    },
+    {
+      "name": "Nikunj Kothari",
+      "handle": "nikunj",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.638Z"
+    },
+    {
+      "name": "Peter Steinberger",
+      "handle": "steipete",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.741Z"
+    },
+    {
+      "name": "Dan Shipper",
+      "handle": "danshipper",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.829Z"
+    },
+    {
+      "name": "Aditya Agarwal",
+      "handle": "adityaag",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:01.918Z"
+    },
+    {
+      "name": "Sam Altman",
+      "handle": "sama",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.042Z"
+    },
+    {
+      "name": "Claude",
+      "handle": "claudeai",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.307Z"
+    },
+    {
+      "name": "Harvey",
+      "handle": "harvey",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.392Z"
+    },
+    {
+      "name": "Winston Weinberg",
+      "handle": "winstonweinberg",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.498Z"
+    },
+    {
+      "name": "Gabe Pereyra",
+      "handle": "gabepereyra",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.581Z"
+    },
+    {
+      "name": "Niko Grupen",
+      "handle": "nikogrupen",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.707Z"
+    },
+    {
+      "name": "Julio Pereyra",
+      "handle": "ItsJulioPereyra",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.793Z"
+    },
+    {
+      "name": "Spencer Poff",
+      "handle": "spencerpoff",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.876Z"
+    },
+    {
+      "name": "Vasudha Rengarajan",
+      "handle": "vtrengarajan",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:02.967Z"
+    },
+    {
+      "name": "Calvin Qi",
+      "handle": "calvincongelado",
+      "module": "X",
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-16T13:36:03.058Z"
+    }
+  ]
+}
