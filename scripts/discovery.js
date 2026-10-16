@@ -87,6 +87,7 @@ export function mergeDiscovery(payload, result) {
   const names = new Set(records.map(item => item.name));
   payload.healthReport.sources = [...(payload.healthReport.sources || []).filter(item => !names.has(item.name)), ...records];
   payload.healthReport.failures = payload.healthReport.sources.filter(item => ['error', 'partial'].includes(item.status));
+  if (added.length && ['error','stale'].includes(payload.sourceStatus.blogs?.status)) payload.sourceStatus.blogs = { ...payload.sourceStatus.blogs, status:'partial', generatedAt:checked };
   const failures = records.filter(item => item.status === 'error');
   if (failures.length) payload.sourceStatus.blogs = { ...payload.sourceStatus.blogs, status: 'partial', reason: failures.map(item => `${item.name}: ${item.reason}`).join('; ') };
   payload.discovery = { ...payload.discovery, completed: true, checkedAt: checked, result };

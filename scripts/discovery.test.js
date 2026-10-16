@@ -64,3 +64,10 @@ test('per-source initial window retries on failure and switches only after succe
     assert.equal(JSON.parse(await readFile(path,'utf8')).__coverage.Example.initialComplete,true);
   } finally {globalThis.fetch=original;}
 });
+
+test('verified discoveries remain deliverable when subscribed feeds fail',()=>{
+  const p=payload();p.sourceStatus.blogs={status:'error',reason:'Site unavailable'};
+  const article={queryId:'models-en',title:'Verified release',url:'https://example.com/release',publishedAt:new Date().toISOString(),content:'Official release content',module:'AI 公司博客及产品更新',verification:'official',evidence:'Inspected official publisher',eventId:'example:model:1:release'};
+  const result=mergeDiscovery(p,{queries:[{id:'models-en',status:'ok'}],articles:[article]});
+  assert.equal(result.sourceStatus.blogs.status,'partial');assert.equal(result.blogs.length,1);
+});
