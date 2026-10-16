@@ -1,0 +1,414 @@
+{
+  "blogs": [
+    {
+      "name": "Harvey Blog",
+      "indexUrl": "https://www.harvey.ai/blog",
+      "sitemapUrl": "https://www.harvey.ai/sitemap.xml",
+      "articlePrefixes": [
+        "https://www.harvey.ai/blog/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "Legora Blog",
+      "indexUrl": "https://legora.com/blog",
+      "articlePrefixes": [
+        "https://legora.com/blog/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "Thomson Reuters CoCounsel",
+      "indexUrl": "https://www.thomsonreuters.com/en-us/posts/innovation-topics/cocounsel/",
+      "articlePrefixes": [
+        "https://www.thomsonreuters.com/en-us/posts/innovation/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "LexisNexis Insights",
+      "indexUrl": "https://www.lexisnexis.com/community/insights/legal/b/product-features/",
+      "articlePrefixes": [
+        "https://www.lexisnexis.com/community/insights/legal/b/product-features/posts/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "vLex Vincent Updates",
+      "indexUrl": "https://support.vlex.com/vincent-by-vlex/vincent/whats-new-release-notes-and-updates/reviewing-product-updates-and-release-notes",
+      "articlePrefixes": [
+        "https://support.vlex.com/vincent-by-vlex/vincent/whats-new-release-notes-and-updates/"
+      ],
+      "includeIndex": true,
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "Spellbook Blog",
+      "indexUrl": "https://spellbook.com/blog",
+      "articlePrefixes": [
+        "https://spellbook.com/blog/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "LegalOn Blog",
+      "indexUrl": "https://www.legalontech.com/blog",
+      "articlePrefixes": [
+        "https://www.legalontech.com/post/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "Luminance Blog",
+      "indexUrl": "https://www.luminance.com/resources/blog/",
+      "sitemapUrl": "https://www.luminance.com/blog-sitemap1.xml",
+      "articlePrefixes": [
+        "https://www.luminance.com/resources/blog/",
+        "https://www.luminance.com/press/"
+      ],
+      "module": "法律 AI 产品"
+    },
+    {
+      "name": "美国法律实务｜LawSites / LawNext",
+      "indexUrl": "https://www.lawnext.com/",
+      "feedUrl": "https://www.lawnext.com/feed/",
+      "articlePrefixes": [
+        "https://www.lawnext.com/"
+      ],
+      "includeKeywords": [
+        "AI",
+        "artificial intelligence",
+        "generative",
+        "agentic",
+        "automation",
+        "legal technology",
+        "legal tech",
+        "machine learning"
+      ],
+      "module": "律所与法务AI实践"
+    },
+    {
+      "name": "美国法律实务｜Artificial Lawyer",
+      "indexUrl": "https://www.artificiallawyer.com/",
+      "feedUrl": "https://www.artificiallawyer.com/feed/",
+      "articlePrefixes": [
+        "https://www.artificiallawyer.com/"
+      ],
+      "includeKeywords": [
+        "AI",
+        "artificial intelligence",
+        "generative",
+        "agentic",
+        "automation",
+        "legal technology",
+        "legal tech",
+        "machine learning"
+      ],
+      "module": "律所与法务AI实践"
+    },
+    {
+      "name": "美国法律实务｜Legal IT Insider",
+      "indexUrl": "https://legaltechnology.com/",
+      "feedUrl": "https://legaltechnology.com/feed/",
+      "articlePrefixes": [
+        "https://legaltechnology.com/"
+      ],
+      "includeKeywords": [
+        "AI",
+        "artificial intelligence",
+        "generative",
+        "agentic",
+        "automation",
+        "legal technology",
+        "legal tech",
+        "machine learning"
+      ],
+      "module": "律所与法务AI实践"
+    },
+    {
+      "name": "美国法律实务｜ILTA",
+      "indexUrl": "https://www.iltanet.org/resources/blogs",
+      "feedUrl": "https://www.iltanet.org/resources/blogs/rss",
+      "articlePrefixes": [
+        "https://www.iltanet.org/blogs/",
+        "https://www.iltanet.org/resources/publications/"
+      ],
+      "includeKeywords": [
+        "AI",
+        "artificial intelligence",
+        "generative",
+        "agentic",
+        "automation",
+        "legal technology",
+        "legal tech",
+        "machine learning"
+      ],
+      "module": "律所与法务AI实践"
+    },
+    {
+      "name": "美国企业法务｜CLOC",
+      "indexUrl": "https://cloc.org/newsroom/",
+      "feedUrl": "https://cloc.org/feed/",
+      "articlePrefixes": [
+        "https://cloc.org/newsdesk/",
+        "https://cloc.org/"
+      ],
+      "includeKeywords": [
+        "AI",
+        "artificial intelligence",
+        "generative",
+        "agentic",
+        "automation",
+        "legal technology",
+        "legal tech",
+        "machine learning"
+      ],
+      "module": "律所与法务AI实践"
+    },
+    {
+      "name": "美国企业法务｜ACC",
+      "indexUrl": "https://www.acc.com/about/newsroom/news",
+      "feedUrl": "https://www.acc.com/rss.xml",
+      "articlePrefixes": [
+        "https://www.acc.com/about/newsroom/news/",
+        "https://www.acc.com/resource-library/",
+        "https://www.acc.com/"
+      ],
+      "includeTitleKeywords": [
+        "AI",
+        "artificial intelligence",
+        "generative",
+        "agentic",
+        "automation",
+        "legal technology",
+        "legal tech",
+        "machine learning"
+      ],
+      "module": "律所与法务AI实践"
+    },
+    {
+      "name": "OpenAI ChatGPT and Codex Changelog",
+      "indexUrl": "https://learn.chatgpt.com/docs/changelog",
+      "articlePrefixes": [
+        "https://learn.chatgpt.com/docs/changelog"
+      ],
+      "includeIndex": true,
+      "watchPage": true,
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "OpenAI Codex Releases",
+      "indexUrl": "https://github.com/openai/codex/releases",
+      "feedUrl": "https://github.com/openai/codex/releases.atom",
+      "articlePrefixes": [
+        "https://github.com/openai/codex/releases/tag/"
+      ],
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "Claude Code What's New",
+      "indexUrl": "https://code.claude.com/docs/en/whats-new",
+      "articlePrefixes": [
+        "https://code.claude.com/docs/en/whats-new"
+      ],
+      "includeIndex": true,
+      "watchPage": true,
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "Claude Code Changelog",
+      "indexUrl": "https://code.claude.com/docs/en/changelog",
+      "articlePrefixes": [
+        "https://code.claude.com/docs/en/changelog"
+      ],
+      "includeIndex": true,
+      "watchPage": true,
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "Claude Code Releases",
+      "indexUrl": "https://github.com/anthropics/claude-code/releases",
+      "feedUrl": "https://github.com/anthropics/claude-code/releases.atom",
+      "articlePrefixes": [
+        "https://github.com/anthropics/claude-code/releases/tag/"
+      ],
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "Claude Code Desktop Changelog",
+      "indexUrl": "https://code.claude.com/docs/en/desktop-changelog",
+      "articlePrefixes": [
+        "https://code.claude.com/docs/en/desktop-changelog"
+      ],
+      "includeIndex": true,
+      "watchPage": true,
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "Anthropic Newsroom",
+      "indexUrl": "https://www.anthropic.com/news",
+      "articlePrefixes": [
+        "https://www.anthropic.com/news/"
+      ],
+      "includeKeywords": [
+        "claude",
+        "claude code"
+      ],
+      "module": "AI 公司博客及产品更新"
+    },
+    {
+      "name": "中国大模型｜Kimi 官方资讯",
+      "indexUrl": "https://www.kimi.com/news/",
+      "articlePrefixes": [
+        "https://www.kimi.com/news/"
+      ],
+      "excludeUrls": [
+        "https://www.kimi.com/news/"
+      ],
+      "includeKeywords": [
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "司法",
+        "合同",
+        "合规",
+        "隐私",
+        "监管",
+        "案例库",
+        "裁判文书",
+        "法律行业"
+      ],
+      "module": "中国大模型厂商资讯"
+    },
+    {
+      "name": "中国大模型｜智谱 AutoClaw",
+      "indexUrl": "https://autoclaw.zhipuai.cn/blog/",
+      "articlePrefixes": [
+        "https://autoclaw.zhipuai.cn/blog/"
+      ],
+      "excludeUrls": [
+        "https://autoclaw.zhipuai.cn/blog/",
+        "https://autoclaw.zhipuai.cn/blog/model/"
+      ],
+      "includeKeywords": [
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "司法",
+        "合同",
+        "合规",
+        "隐私",
+        "监管",
+        "法条",
+        "案例检索",
+        "法律大模型"
+      ],
+      "module": "中国大模型厂商资讯"
+    },
+    {
+      "name": "中国大模型｜通义千问 Qwen",
+      "indexUrl": "https://qwenlm.github.io/blog/",
+      "articlePrefixes": [
+        "https://qwenlm.github.io/blog/"
+      ],
+      "includeKeywords": [
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy",
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "合同",
+        "合规",
+        "隐私"
+      ],
+      "module": "中国大模型厂商资讯"
+    },
+    {
+      "name": "中国大模型｜DeepSeek 官方动态",
+      "indexUrl": "https://www.deepseek.com/news/",
+      "articlePrefixes": [
+        "https://www.deepseek.com/news/"
+      ],
+      "includeKeywords": [
+        "legal",
+        "law",
+        "lawyer",
+        "contract",
+        "compliance",
+        "privacy",
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "合同",
+        "合规",
+        "隐私"
+      ],
+      "module": "中国大模型厂商资讯"
+    },
+    {
+      "name": "中国大模型｜腾讯混元",
+      "indexUrl": "https://cloud.tencent.com/product/hunyuan",
+      "articlePrefixes": [
+        "https://cloud.tencent.com/product/__watch_only__"
+      ],
+      "includeIndex": true,
+      "watchPage": true,
+      "includeKeywords": [
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "司法",
+        "合同",
+        "合规",
+        "隐私"
+      ],
+      "module": "中国大模型厂商资讯"
+    },
+    {
+      "name": "中国大模型｜火山方舟与豆包",
+      "indexUrl": "https://www.volcengine.com/product/ark",
+      "articlePrefixes": [
+        "https://www.volcengine.com/product/__watch_only__"
+      ],
+      "includeIndex": true,
+      "watchPage": true,
+      "includeKeywords": [
+        "法律",
+        "律所",
+        "律师",
+        "法务",
+        "司法",
+        "合同",
+        "合规",
+        "隐私"
+      ],
+      "module": "中国大模型厂商资讯"
+    }
+  ],
+  "podcasts": [
+    {
+      "name": "Lex Fridman Podcast",
+      "rssUrl": "https://lexfridman.com/feed/podcast/",
+      "url": "https://lexfridman.com/podcast/",
+      "fetchMethod": "public",
+      "coverage": "all_topics",
+      "module": "AI播客"
+    },
+    {
+      "name": "All-In",
+      "rssUrl": "https://allinchamathjason.libsyn.com/rss",
+      "url": "https://allin.com/episodes",
+      "fetchMethod": "public",
+      "module": "AI播客"
+    }
+  ]
+}

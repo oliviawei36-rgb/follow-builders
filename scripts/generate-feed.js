@@ -565,6 +565,7 @@ export async function fetchXContent(xAccounts, bearerToken, state, errors) {
   state.xSinceIds ||= {};
   const requestStats = { userLookupRequests: 0, userResourcesRead: 0, timelineRequests: 0, tweetResourcesRead: 0 };
   state.lastXRequestStats = requestStats;
+  state.lastXSourceHealth = Object.fromEntries(xAccounts.map(account => [account.handle.toLowerCase(), {name:account.name,handle:account.handle,module:'X',status:'error',count:0,reason:'Not completed: user lookup or earlier account request failed',checkedAt:new Date().toISOString()}]));
   const cutoff = new Date(Date.now() - TWEET_LOOKBACK_HOURS * 60 * 60 * 1000);
 
   // Reuse stable user IDs from state. X charges per user resource returned, so
@@ -597,6 +598,7 @@ export async function fetchXContent(xAccounts, bearerToken, state, errors) {
       if (!res.ok) {
         if ([401, 402, 403, 429].includes(res.status)) {
           errors.push(`X API: User lookup blocked: HTTP ${res.status}; stopping further requests`);
+          for (const health of Object.values(state.lastXSourceHealth)) health.reason = `User lookup blocked: HTTP ${res.status}`;
           return results;
         }
         errors.push(
@@ -650,7 +652,8 @@ export async function fetchXContent(xAccounts, bearerToken, state, errors) {
       );
 
       if (!res.ok) {
-        if ([401, 402, 403, 429].includes(res.status)) {
+        state.lastXSourceHealth[handleKey].reason = `Timeline request failed: HTTP ${res.status}`;
+        if ([401, 402, 429].includes(res.status)) {
           errors.push(`X API: Timeline requests blocked: HTTP ${res.status}; stopping remaining accounts`);
           break;
         }
@@ -663,6 +666,7 @@ export async function fetchXContent(xAccounts, bearerToken, state, errors) {
       const data = await res.json();
       const allTweets = data.data || [];
       requestStats.tweetResourcesRead += allTweets.length;
+      state.lastXSourceHealth[handleKey] = {name:account.name,handle:account.handle,module:'X',status:allTweets.length ? 'ok':'no_updates',count:allTweets.length,checkedAt:new Date().toISOString()};
 
       // X returns newest posts first. Advance the cursor only after a successful
       // response so a failed request can be retried without skipping content.
@@ -707,6 +711,7 @@ export async function fetchXContent(xAccounts, bearerToken, state, errors) {
 
       await new Promise((r) => setTimeout(r, 200));
     } catch (err) {
+      state.lastXSourceHealth[handleKey].reason = err.message;
       errors.push(`X API: Error fetching @${account.handle}: ${err.message}`);
     }
   }
@@ -970,6 +975,11 @@ async function fetchBlogContent(blogs, state, errors) {
         candidates = parseClaudeBlogIndex(indexHtml);
       }
 
+      if (!candidates.length) {
+        errors.push(`Blog: Article index could not be parsed for ${blog.name}`);
+        continue;
+      }
+
       // Step 2: Filter to unseen articles, cap at MAX_ARTICLES_PER_BLOG.
       // Blog index pages list articles newest-first. We only consider the
       // first few entries (MAX_INDEX_SCAN) to avoid crawling the entire
@@ -1115,6 +1125,7 @@ async function main() {
     );
     // Persist cached IDs even when the timeline service fails, avoiding paid lookups on retry.
     await saveState(state);
+    await writeFile(join(SCRIPT_DIR, '..', 'health-x.json'), JSON.stringify({generatedAt:new Date().toISOString(),sources:Object.values(state.lastXSourceHealth)},null,2));
     console.error(`  Found ${xContent.length} builders with new tweets`);
     console.error(`  X request stats: ${JSON.stringify(state.lastXRequestStats)}`);
 
@@ -1141,6 +1152,7 @@ async function main() {
       generatedAt: new Date().toISOString(),
       lookbackHours: TWEET_LOOKBACK_HOURS,
       x: publishedX,
+      sourceHealth: Object.values(state.lastXSourceHealth),
       stats: { xBuilders: publishedX.length, totalTweets, ...state.lastXRequestStats },
       errors: xErrors.length > 0 ? xErrors : undefined,
     };
@@ -1157,7 +1169,7 @@ async function main() {
   if (runPodcasts) {
     console.error("Fetching podcast content (RSS + pod2txt)...");
     const podcasts = await fetchPodcastContent(
-      sources.podcasts,
+      sources.podcasts.filter(source => source.fetchMethod !== 'public'),
       pod2txtKey,
       state,
       errors,
@@ -1191,6 +1203,11 @@ async function main() {
       generatedAt: new Date().toISOString(),
       lookbackHours: BLOG_LOOKBACK_HOURS,
       blogs: blogContent,
+      sourceHealth: sources.blogs.map(blog => {
+        const problems = errors.filter(error => error.startsWith('Blog') && (error.includes(blog.name) || error.includes(blog.indexUrl)));
+        const count = blogContent.filter(article => article.name === blog.name).length;
+        return {name:blog.name,module:'AI 公司博客及产品更新',status:problems.length ? (count ? 'partial':'error') : count ? 'ok':'no_updates',count,reason:problems.length ? problems.join('; '):undefined,checkedAt:new Date().toISOString()};
+      }),
       stats: { blogPosts: blogContent.length },
       errors:
         errors.filter((e) => e.startsWith("Blog")).length > 0
