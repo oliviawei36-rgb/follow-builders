@@ -63,3 +63,11 @@ test('seen posts are not emitted again', async () => {
     assert.deepEqual(await fetchXContent([account], 'test-token', s, []), []);
   });
 });
+
+test('incremental retries retain same-day posts without reintroducing duplicates', async () => {
+  const { mergeDailyXContent } = await import('./generate-feed.js');
+  const previous = { generatedAt: '2026-10-16T00:00:00Z', x: [{ handle: 'Example', tweets: [{ id: '1', text: 'One' }] }] };
+  assert.equal(mergeDailyXContent(previous, [], new Date('2026-10-16T12:00:00Z'))[0].tweets.length, 1);
+  assert.equal(mergeDailyXContent(previous, [{ handle: 'Example', tweets: [{ id: '1', text: 'One' }, { id: '2', text: 'Two' }] }], new Date('2026-10-16T12:00:00Z'))[0].tweets.length, 2);
+  assert.deepEqual(mergeDailyXContent(previous, [], new Date('2026-10-17T00:00:00Z')), []);
+});

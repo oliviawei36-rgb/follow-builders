@@ -1055,6 +1055,22 @@ async function fetchBlogContent(blogs, state, errors) {
   return results;
 }
 
+// Retain today's published posts across incremental retries. An empty successful
+// retry must not erase news before an offline reader has received it.
+export function mergeDailyXContent(previous, current, now = new Date()) {
+  const day = (value) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(value));
+  const sameDay = previous?.generatedAt && Number.isFinite(Date.parse(previous.generatedAt)) && day(previous.generatedAt) === day(now);
+  const authors = new Map();
+  for (const author of [...(sameDay ? previous.x || [] : []), ...current]) {
+    const key = author.handle.toLowerCase();
+    const old = authors.get(key);
+    const tweets = new Map((old?.tweets || []).map(tweet => [tweet.id, tweet]));
+    for (const tweet of author.tweets) tweets.set(tweet.id, tweet);
+    authors.set(key, { ...author, tweets: [...tweets.values()] });
+  }
+  return [...authors.values()];
+}
+
 // -- Main --------------------------------------------------------------------
 
 async function main() {
@@ -1102,7 +1118,10 @@ async function main() {
     console.error(`  Found ${xContent.length} builders with new tweets`);
     console.error(`  X request stats: ${JSON.stringify(state.lastXRequestStats)}`);
 
-    const totalTweets = xContent.reduce((sum, a) => sum + a.tweets.length, 0);
+    let previousXFeed = null;
+    try { previousXFeed = JSON.parse(await readFile(join(SCRIPT_DIR, '..', 'feed-x.json'), 'utf8')); } catch { /* A missing previous feed is safe on first run. */ }
+    const publishedX = mergeDailyXContent(previousXFeed, xContent);
+    const totalTweets = publishedX.reduce((sum, a) => sum + a.tweets.length, 0);
     const xErrors = errors.filter((e) => e.startsWith("X API"));
 
     if (xErrors.length > 0) {
@@ -1121,8 +1140,8 @@ async function main() {
     const xFeed = {
       generatedAt: new Date().toISOString(),
       lookbackHours: TWEET_LOOKBACK_HOURS,
-      x: xContent,
-      stats: { xBuilders: xContent.length, totalTweets, ...state.lastXRequestStats },
+      x: publishedX,
+      stats: { xBuilders: publishedX.length, totalTweets, ...state.lastXRequestStats },
       errors: xErrors.length > 0 ? xErrors : undefined,
     };
     await writeFile(
@@ -1130,7 +1149,7 @@ async function main() {
       JSON.stringify(xFeed, null, 2),
     );
     console.error(
-      `  feed-x.json: ${xContent.length} builders, ${totalTweets} tweets`,
+      `  feed-x.json: ${publishedX.length} builders, ${totalTweets} tweets retained for today`,
     );
   }
 
