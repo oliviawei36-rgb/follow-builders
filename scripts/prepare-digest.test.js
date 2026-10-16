@@ -41,6 +41,7 @@ test("prepare-digest emits valid degraded JSON when every network source times o
       env: {
         ...process.env,
         FOLLOW_BUILDERS_REMOTE_TIMEOUT_MS: "25",
+        FOLLOW_BUILDERS_COVERAGE_TIMEOUT_MS: "25",
         FOLLOW_BUILDERS_LOCAL_TIMEOUT_MS: "50",
         FOLLOW_BUILDERS_REQUEST_TIMEOUT_MS: "25",
       },
@@ -55,4 +56,15 @@ test("prepare-digest emits valid degraded JSON when every network source times o
   assert.deepEqual(output.x, []);
   assert.ok(Array.isArray(output.errors));
   assert.equal(typeof output.prompts.digest_intro, "string");
+});
+
+test('compressed cloud coverage round-trips without an extra decompression dependency', async () => {
+  const {gzipSync}=await import('node:zlib');
+  const {fetchGzipJSON}=await import('./prepare-digest.js');
+  const original=globalThis.fetch;
+  try {
+    const body=gzipSync(JSON.stringify({blogs:[{title:'Jev'}]}));
+    globalThis.fetch=async()=>({ok:true,arrayBuffer:async()=>body});
+    assert.equal((await fetchGzipJSON('https://example.com/feed.json.gz')).blogs[0].title,'Jev');
+  } finally {globalThis.fetch=original;}
 });

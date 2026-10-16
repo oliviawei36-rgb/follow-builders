@@ -74,3 +74,5 @@ Keep the six existing modules. Chinese model vendors go into
 change observed now, not that every model listed on that page launched today.
 The rolling window covers discoverable index/feed/sitemap entries, not a promise
 that every historical post on the internet was scanned.
+
+Cloud website content may carry `contentExcerpt: true`. Summarize only the supplied excerpt; do not imply that a full article or full evaluation has been reviewed.

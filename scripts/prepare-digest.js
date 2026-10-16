@@ -17,6 +17,7 @@
 // ============================================================================
 
 import { readFile, mkdir } from 'fs/promises';
+import { gunzipSync } from 'node:zlib';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
@@ -77,6 +78,14 @@ export async function fetchText(url, timeoutMs = REMOTE_FETCH_TIMEOUT_MS) {
   }
 }
 
+export async function fetchGzipJSON(url, timeoutMs = Number(process.env.FOLLOW_BUILDERS_COVERAGE_TIMEOUT_MS || 60000)) {
+  try {
+    const res = await fetch(`${url}?fb=${Date.now()}`, { signal: AbortSignal.timeout(timeoutMs) });
+    if (!res.ok) return null;
+    return JSON.parse(gunzipSync(Buffer.from(await res.arrayBuffer())).toString('utf8'));
+  } catch { return null; }
+}
+
 // -- Main --------------------------------------------------------------------
 
 export async function main({ excludeSources = [], emit = true } = {}) {
@@ -97,7 +106,7 @@ export async function main({ excludeSources = [], emit = true } = {}) {
   }
 
   // Prefer the precomputed cloud scan so delivery does not repeat the same free site requests.
-  const coverage = excludeSources.includes('blogs') ? null : await fetchJSON('https://raw.githubusercontent.com/oliviawei36-rgb/follow-builders/main/feed-coverage.json');
+  const coverage = excludeSources.includes('blogs') ? null : await fetchGzipJSON('https://raw.githubusercontent.com/oliviawei36-rgb/follow-builders/main/feed-coverage.json.gz');
   const currentCoverage = coverage?.sourceHealth && Date.now() - Date.parse(coverage.generatedAt) < 30 * 3600000 ? coverage : null;
   const discovery = excludeSources.includes('blogs') ? null : await discoveryPlan();
 

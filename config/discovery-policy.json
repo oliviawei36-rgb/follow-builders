@@ -6,25 +6,25 @@
     {
       "id": "models-en",
       "name": "主题补漏｜全球模型发布",
-      "query": "new AI model release launch announcement",
+      "query": "AI model launch release",
       "module": "AI 公司博客及产品更新"
     },
     {
       "id": "legal-en",
       "name": "主题补漏｜法律 AI 英文",
-      "query": "legal AI model agent launch contract compliance privacy",
+      "query": "legal AI model launch",
       "module": "法律 AI 产品"
     },
     {
       "id": "models-zh",
       "name": "主题补漏｜中国模型发布",
-      "query": "大模型 新模型 发布 上线",
+      "query": "大模型 新模型 发布",
       "module": "中国大模型厂商资讯"
     },
     {
       "id": "legal-zh",
       "name": "主题补漏｜法律大模型中文",
-      "query": "法律大模型 法律智能体 发布 合同 合规",
+      "query": "法律大模型 法律智能体 发布",
       "module": "中国大模型厂商资讯"
     }
   ],

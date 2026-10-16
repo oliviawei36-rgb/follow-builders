@@ -62,3 +62,17 @@ test('08:00 gate resumes after offline time and ignores legacy whole-day success
   const input = JSON.parse(await readFile(resumed.inputPath));
   assert.equal(input.x[0].tweets.length, 1);
 });
+
+test('blog staging requires completed discovery and retains event identities', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'fb-discovery-stage-'));
+  const input=join(root,'input.json'), digest=join(root,'digest.md');
+  const payload={sourceStatus:{blogs:{status:'ok'}},blogs:[{url:'https://example.com/release',eventId:'example:model:1:release'}],discovery:{completed:false}};
+  await writeFile(input,JSON.stringify(payload));await writeFile(digest,'# Verified model release');
+  const args=[join(dir,'daily-digest.js'),'stage','--input',input,'--digest',digest,'--sources','blogs','--thread-id','test-thread'];
+  const env={...process.env,FOLLOW_BUILDERS_USER_DIR:root};
+  await assert.rejects(exec(process.execPath,args,{env}),/Complete daily topic discovery/);
+  payload.discovery.completed=true;await writeFile(input,JSON.stringify(payload));
+  const result=JSON.parse((await exec(process.execPath,args,{env})).stdout);
+  const receipt=JSON.parse(await readFile(join(root,'receipts',`${result.receiptId}.json`)));
+  assert.deepEqual(receipt.eventIds.blogs,['example:model:1:release']);
+});

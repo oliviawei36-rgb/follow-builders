@@ -38,8 +38,9 @@ export function parseSearchFeed(xml, query) {
     snippet: xmlText(block, 'description'), verification: 'unverified_lead'
   })).filter(item => /^https?:\/\//.test(item.url));
 }
-export async function fetchDiscoveryLeads({ signal } = {}) {
+export async function fetchDiscoveryLeads({ signal, lookbackDays } = {}) {
   const plan = await discoveryPlan();
+  if (lookbackDays) plan.lookbackDays = lookbackDays;
   const searches = await Promise.all(plan.queries.map(async query => {
     try {
       const cutoff = new Date(Date.now() - plan.lookbackDays * 86400000).toISOString().slice(0, 10);
@@ -97,7 +98,9 @@ export async function completeDiscovery(inputPath, resultsPath, { root = ROOT } 
   const payload = await readJSON(inputPath);
   const result = await readJSON(resultsPath);
   // Re-fetch official pages. Never promote search snippets into digest facts.
+  const verified = [];
   for (const article of result.articles || []) {
+    try {
     const html = await fetchHtml(article.url, { timeoutMs: 15000 });
     const fetched = extractArticle(html, article.url, article.name || '主题补漏');
     if (fetched.content.length < 100 || fetched.title === 'Untitled') throw new Error(`Official page could not be parsed: ${article.url}`);
@@ -106,7 +109,13 @@ export async function completeDiscovery(inputPath, resultsPath, { root = ROOT } 
     article.publishedAt = fetched.publishedAt || article.publishedAt;
     article.name ||= '主题补漏';
     article.verifiedAt = new Date().toISOString();
+    verified.push(article);
+    } catch (error) {
+      const query = result.queries.find(item => item.id === article.queryId);
+      if (query) { query.status = 'error'; query.reason = `Official page verification failed: ${article.url}: ${error.message}`; }
+    }
   }
+  result.articles = verified;
   mergeDiscovery(payload, result);
   await atomicJSON(inputPath, payload);
   const statePath = join(root, 'discovery-state.json');
