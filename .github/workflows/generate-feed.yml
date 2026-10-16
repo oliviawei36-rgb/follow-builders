@@ -2,8 +2,8 @@ name: Generate Feeds
 
 on:
   schedule:
-    # All feeds (tweets, podcasts, blogs): once daily at 00:05 UTC (08:05 Asia/Shanghai)
-    - cron: '5 0 * * *'
+    # Refresh before the 08:00 Asia/Shanghai digest; keep off the hour boundary.
+    - cron: '15 23 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -11,43 +11,66 @@ on:
         required: false
         default: 'all'
         type: choice
-        options:
-          - all
-          - tweets-only
-          - podcasts-only
-          - blogs-only
+        options: [all, tweets-only, podcasts-only, blogs-only]
+
+concurrency:
+  group: follow-builders-feeds
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
+    timeout-minutes: 20
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+      POD2TXT_API_KEY: ${{ secrets.POD2TXT_API_KEY }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Install dependencies
-        run: cd scripts && npm install
-
-      - name: Generate feeds
-        env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-          POD2TXT_API_KEY: ${{ secrets.POD2TXT_API_KEY }}
+        run: cd scripts && npm ci
+      - name: Run regression checks
+        run: node --test scripts/generate-feed.test.js
+      - name: Fetch Twitter independently
+        id: tweets
+        if: github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'tweets-only'
+        continue-on-error: true
+        run: node scripts/generate-feed.js --tweets-only
+      - name: Fetch blogs independently
+        id: blogs
+        if: "!cancelled() && (github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'blogs-only')"
+        continue-on-error: true
+        run: node scripts/generate-feed.js --blogs-only
+      - name: Fetch podcasts when configured
+        id: podcasts
+        if: "!cancelled() && (github.event_name == 'schedule' || inputs.mode == 'all' || inputs.mode == 'podcasts-only')"
+        continue-on-error: true
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.mode }}" != "all" ]; then
-            cd scripts && node generate-feed.js --${{ inputs.mode }}
+          if [ -n "$POD2TXT_API_KEY" ]; then
+            node scripts/generate-feed.js --podcasts-only
           else
-            cd scripts && node generate-feed.js
+            echo 'Podcast transcription is not configured; local digest uses the upstream podcast feed.' >> "$GITHUB_STEP_SUMMARY"
+            if [ "${{ inputs.mode }}" = 'podcasts-only' ]; then exit 1; fi
           fi
-
-      - name: Commit and push feeds
+      - name: Persist successful feeds and cached user IDs
+        if: "!cancelled()"
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add feed-x.json feed-podcasts.json feed-blogs.json state-feed.json
-          git diff --cached --quiet || git commit -m "chore: update feeds [skip ci]"
+          git diff --cached --quiet || git commit -m 'chore: update feeds [skip ci]'
           git push
+      - name: Report each source independently
+        if: "!cancelled()"
+        env:
+          TWEETS: ${{ steps.tweets.outcome }}
+          BLOGS: ${{ steps.blogs.outcome }}
+          PODCASTS: ${{ steps.podcasts.outcome }}
+        run: |
+          echo "Twitter: $TWEETS; Blogs: $BLOGS; Podcasts: $PODCASTS" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$TWEETS" = 'failure' ] || [ "$BLOGS" = 'failure' ] || [ "$PODCASTS" = 'failure' ]; then exit 1; fi

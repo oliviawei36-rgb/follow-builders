@@ -28,7 +28,7 @@ const RSS_USER_AGENT =
 const TWEET_LOOKBACK_HOURS = 24;
 const PODCAST_LOOKBACK_HOURS = 336; // 14 days — podcasts publish weekly/biweekly, not daily
 const BLOG_LOOKBACK_HOURS = 72;
-const MAX_TWEETS_PER_USER = 3;
+const MAX_TWEETS_PER_USER = 5;
 const MAX_ARTICLES_PER_BLOG = 3;
 const X_USER_LOOKUP_BATCH_SIZE = 5;
 const X_RETRY_STATUSES = new Set([500, 502, 503, 504]);
@@ -40,20 +40,35 @@ const STATE_PATH = join(SCRIPT_DIR, "..", "state-feed.json");
 
 // -- State Management --------------------------------------------------------
 
-// Tracks which tweet IDs and video IDs we've already included in feeds
-// so we never send the same content twice across runs.
+// Tracks delivered content plus stable X user IDs and per-account cursors.
+// Caching user IDs avoids paying for the same user lookups every day, while
+// since_id cursors make X return only posts newer than the last successful run.
 
 async function loadState() {
   if (!existsSync(STATE_PATH)) {
-    return { seenTweets: {}, seenVideos: {}, seenArticles: {} };
+    return {
+      seenTweets: {},
+      seenVideos: {},
+      seenArticles: {},
+      xUsers: {},
+      xSinceIds: {},
+    };
   }
   try {
     const state = JSON.parse(await readFile(STATE_PATH, "utf-8"));
-    // Ensure seenArticles exists for older state files
+    // Ensure newer state fields exist when upgrading an older installation.
     if (!state.seenArticles) state.seenArticles = {};
+    if (!state.xUsers) state.xUsers = {};
+    if (!state.xSinceIds) state.xSinceIds = {};
     return state;
   } catch {
-    return { seenTweets: {}, seenVideos: {}, seenArticles: {} };
+    return {
+      seenTweets: {},
+      seenVideos: {},
+      seenArticles: {},
+      xUsers: {},
+      xSinceIds: {},
+    };
   }
 }
 
@@ -527,11 +542,11 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchXWithRetry(url, options) {
+export async function fetchXWithRetry(url, options) {
   let lastResponse;
   for (let attempt = 1; attempt <= X_RETRY_ATTEMPTS; attempt++) {
     try {
-      const res = await fetch(url, options);
+      const res = await fetch(url, { ...options, signal: AbortSignal.timeout(20000) });
       lastResponse = res;
       if (!X_RETRY_STATUSES.has(res.status) || attempt === X_RETRY_ATTEMPTS) {
         return res;
@@ -544,24 +559,46 @@ async function fetchXWithRetry(url, options) {
   return lastResponse;
 }
 
-async function fetchXContent(xAccounts, bearerToken, state, errors) {
+export async function fetchXContent(xAccounts, bearerToken, state, errors) {
   const results = [];
+  state.xUsers ||= {};
+  state.xSinceIds ||= {};
+  const requestStats = { userLookupRequests: 0, userResourcesRead: 0, timelineRequests: 0, tweetResourcesRead: 0 };
+  state.lastXRequestStats = requestStats;
   const cutoff = new Date(Date.now() - TWEET_LOOKBACK_HOURS * 60 * 60 * 1000);
 
-  // Batch lookup user IDs. Smaller batches make one flaky X response less likely
-  // to wipe out the whole feed.
-  const handles = xAccounts.map((a) => a.handle);
-  let userMap = {};
+  // Reuse stable user IDs from state. X charges per user resource returned, so
+  // only newly-added handles should go through the username lookup endpoint.
+  const activeHandles = new Set(
+    xAccounts.map((account) => account.handle.toLowerCase()),
+  );
+  const userMap = {};
+  for (const [handle, user] of Object.entries(state.xUsers || {})) {
+    if (activeHandles.has(handle) && user?.id) userMap[handle] = user;
+  }
 
-  for (let i = 0; i < handles.length; i += X_USER_LOOKUP_BATCH_SIZE) {
-    const batch = handles.slice(i, i + X_USER_LOOKUP_BATCH_SIZE);
+  const handlesToLookup = xAccounts
+    .map((account) => account.handle)
+    .filter((handle) => !userMap[handle.toLowerCase()]);
+
+  for (
+    let i = 0;
+    i < handlesToLookup.length;
+    i += X_USER_LOOKUP_BATCH_SIZE
+  ) {
+    const batch = handlesToLookup.slice(i, i + X_USER_LOOKUP_BATCH_SIZE);
     try {
+      requestStats.userLookupRequests++;
       const res = await fetchXWithRetry(
         `${X_API_BASE}/users/by?usernames=${batch.join(",")}&user.fields=name,description`,
         { headers: { Authorization: `Bearer ${bearerToken}` } },
       );
 
       if (!res.ok) {
+        if ([401, 402, 403, 429].includes(res.status)) {
+          errors.push(`X API: User lookup blocked: HTTP ${res.status}; stopping further requests`);
+          return results;
+        }
         errors.push(
           `X API: User lookup failed for ${batch.join(",")}: HTTP ${res.status}`,
         );
@@ -569,12 +606,17 @@ async function fetchXContent(xAccounts, bearerToken, state, errors) {
       }
 
       const data = await res.json();
+      requestStats.userResourcesRead += (data.data || []).length;
       for (const user of data.data || []) {
-        userMap[user.username.toLowerCase()] = {
+        const handle = user.username.toLowerCase();
+        const cachedUser = {
           id: user.id,
           name: user.name,
           description: user.description || "",
+          cachedAt: new Date().toISOString(),
         };
+        userMap[handle] = cachedUser;
+        state.xUsers[handle] = cachedUser;
       }
       if (data.errors) {
         for (const err of data.errors) {
@@ -586,24 +628,30 @@ async function fetchXContent(xAccounts, bearerToken, state, errors) {
     }
   }
 
-  // Fetch recent tweets per user (max 3, exclude retweets/replies)
+  // Fetch only newer posts for cached users; retain all five paid results.
   for (const account of xAccounts) {
-    const userData = userMap[account.handle.toLowerCase()];
+    const handleKey = account.handle.toLowerCase();
+    const userData = userMap[handleKey];
     if (!userData) continue;
 
     try {
+      const cursor = state.xSinceIds[handleKey];
+      const timeOrCursor = cursor
+        ? `&since_id=${encodeURIComponent(cursor)}`
+        : `&start_time=${cutoff.toISOString()}`;
+      requestStats.timelineRequests++;
       const res = await fetchXWithRetry(
         `${X_API_BASE}/users/${userData.id}/tweets?` +
-          `max_results=5` + // fetch 5, then filter to 3 new ones
+          `max_results=5` + // X requires at least five results per timeline request
           `&tweet.fields=created_at,public_metrics,referenced_tweets,note_tweet` +
           `&exclude=retweets,replies` +
-          `&start_time=${cutoff.toISOString()}`,
+          timeOrCursor,
         { headers: { Authorization: `Bearer ${bearerToken}` } },
       );
 
       if (!res.ok) {
-        if (res.status === 429) {
-          errors.push(`X API: Rate limited, skipping remaining accounts`);
+        if ([401, 402, 403, 429].includes(res.status)) {
+          errors.push(`X API: Timeline requests blocked: HTTP ${res.status}; stopping remaining accounts`);
           break;
         }
         errors.push(
@@ -614,6 +662,13 @@ async function fetchXContent(xAccounts, bearerToken, state, errors) {
 
       const data = await res.json();
       const allTweets = data.data || [];
+      requestStats.tweetResourcesRead += allTweets.length;
+
+      // X returns newest posts first. Advance the cursor only after a successful
+      // response so a failed request can be retried without skipping content.
+      if (allTweets.length > 0) {
+        state.xSinceIds[handleKey] = allTweets[0].id;
+      }
 
       // Filter out already-seen tweets, cap at 3
       const newTweets = [];
@@ -1011,13 +1066,14 @@ async function main() {
   // If a specific --*-only flag is set, only that feed type runs.
   // If no flag is set, all three run.
   const runTweets = tweetsOnly || (!podcastsOnly && !blogsOnly);
-  const runPodcasts = podcastsOnly || (!tweetsOnly && !blogsOnly);
+  const wantsPodcasts = podcastsOnly || (!tweetsOnly && !blogsOnly);
+  const runPodcasts = wantsPodcasts && Boolean(process.env.POD2TXT_API_KEY);
   const runBlogs = blogsOnly || (!tweetsOnly && !podcastsOnly);
 
   const xBearerToken = process.env.X_BEARER_TOKEN;
   const pod2txtKey = process.env.POD2TXT_API_KEY;
 
-  if (runPodcasts && !pod2txtKey) {
+  if (podcastsOnly && !pod2txtKey) {
     console.error("POD2TXT_API_KEY not set");
     process.exit(1);
   }
@@ -1025,6 +1081,8 @@ async function main() {
     console.error("X_BEARER_TOKEN not set");
     process.exit(1);
   }
+
+  if (wantsPodcasts && !pod2txtKey) console.error("Podcast feed skipped: POD2TXT_API_KEY not configured; other feeds remain available");
 
   const sources = await loadSources();
   const state = await loadState();
@@ -1039,7 +1097,10 @@ async function main() {
       state,
       errors,
     );
+    // Persist cached IDs even when the timeline service fails, avoiding paid lookups on retry.
+    await saveState(state);
     console.error(`  Found ${xContent.length} builders with new tweets`);
+    console.error(`  X request stats: ${JSON.stringify(state.lastXRequestStats)}`);
 
     const totalTweets = xContent.reduce((sum, a) => sum + a.tweets.length, 0);
     const xErrors = errors.filter((e) => e.startsWith("X API"));
@@ -1061,7 +1122,7 @@ async function main() {
       generatedAt: new Date().toISOString(),
       lookbackHours: TWEET_LOOKBACK_HOURS,
       x: xContent,
-      stats: { xBuilders: xContent.length, totalTweets },
+      stats: { xBuilders: xContent.length, totalTweets, ...state.lastXRequestStats },
       errors: xErrors.length > 0 ? xErrors : undefined,
     };
     await writeFile(
@@ -1132,7 +1193,7 @@ async function main() {
   }
 }
 
-main().catch((err) => {
+if (process.argv[1] === decodeURIComponent(new URL(import.meta.url).pathname)) main().catch((err) => {
   console.error("Feed generation failed:", err.message);
   process.exit(1);
 });
