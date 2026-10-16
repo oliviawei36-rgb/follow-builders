@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T13:36:04.329Z",
+  "generatedAt": "2026-10-16T15:01:47.870Z",
   "lookbackHours": 72,
   "blogs": [],
   "sourceHealth": [
@@ -8,7 +8,7 @@
       "module": "AI 公司博客及产品更新",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T13:36:04.330Z"
+      "checkedAt": "2026-10-16T15:01:47.870Z"
     },
     {
       "name": "Claude Blog",
@@ -16,7 +16,7 @@
       "status": "error",
       "count": 0,
       "reason": "Blog: Article index could not be parsed for Claude Blog",
-      "checkedAt": "2026-10-16T13:36:04.330Z"
+      "checkedAt": "2026-10-16T15:01:47.870Z"
     }
   ],
   "stats": {
