@@ -269,9 +269,9 @@
     "nikogrupen": "2110773803592937733"
   },
   "lastXRequestStats": {
-    "userLookupRequests": 7,
-    "userResourcesRead": 34,
+    "userLookupRequests": 0,
+    "userResourcesRead": 0,
     "timelineRequests": 34,
-    "tweetResourcesRead": 38
+    "tweetResourcesRead": 0
   }
 }

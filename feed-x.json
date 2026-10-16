@@ -1,101 +1,13 @@
 {
-  "generatedAt": "2026-10-16T12:50:38.059Z",
+  "generatedAt": "2026-10-16T12:51:40.757Z",
   "lookbackHours": 24,
-  "x": [
-    {
-      "source": "x",
-      "name": "Thibault Sottiaux",
-      "handle": "thsottiaux",
-      "bio": "Codex & ChatGPT @OpenAI",
-      "tweets": [
-        {
-          "id": "2110750421367287996",
-          "text": "Day 11/\n\nWe've landed a series of changes and more compute to very significantly decrease the occurrence of the disruptive \"Selected model is at capacity. Please try a different model\". When it does happen, it should also eventually just continue by itself and not just block on it.\n\nLet us know if you still see it out there in the wild and we'll take a look.",
-          "createdAt": "2026-10-15T15:11:30.000Z",
-          "url": "https://x.com/thsottiaux/status/2110750421367287996",
-          "likes": 10608,
-          "retweets": 308,
-          "replies": 2600,
-          "isQuote": false,
-          "quotedTweetId": null
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Peter Yang",
-      "handle": "petergyang",
-      "bio": "Practical AI tutorials and interviews for busy people | Get my best AI skills and guides at https://t.co/6VAA6p81x6",
-      "tweets": [
-        {
-          "id": "2110866215765975050",
-          "text": "Opus 5.5, as great as it is, still isn't good at forming a strong objective opinion and holding its ground when I push back on it. https://t.co/HymfYCGJxb",
-          "createdAt": "2026-10-15T22:51:38.000Z",
-          "url": "https://x.com/petergyang/status/2110866215765975050",
-          "likes": 122,
-          "retweets": 0,
-          "replies": 40,
-          "isQuote": true,
-          "quotedTweetId": "2110850723827388602"
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Guillermo Rauch",
-      "handle": "rauchg",
-      "bio": "@vercel CEO",
-      "tweets": [
-        {
-          "id": "2110865799791714339",
-          "text": "What should I ask @tobi? https://t.co/exiniKS6ST",
-          "createdAt": "2026-10-15T22:49:59.000Z",
-          "url": "https://x.com/rauchg/status/2110865799791714339",
-          "likes": 89,
-          "retweets": 0,
-          "replies": 39,
-          "isQuote": true,
-          "quotedTweetId": "2110855331672944675"
-        },
-        {
-          "id": "2110817100096995332",
-          "text": "Free AI https://t.co/54KIj92daJ",
-          "createdAt": "2026-10-15T19:36:28.000Z",
-          "url": "https://x.com/rauchg/status/2110817100096995332",
-          "likes": 184,
-          "retweets": 5,
-          "replies": 16,
-          "isQuote": true,
-          "quotedTweetId": "2110815707789492578"
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Zara Zhang",
-      "handle": "zarazhangrui",
-      "bio": "Builder. Make something people want, then make people want it. Harvard’17. GitHub: https://t.co/KCuEajezlL \nYouTube: https://t.co/8xzbGWtf6w",
-      "tweets": [
-        {
-          "id": "2110815456458412179",
-          "text": "\"Never underestimate your audience's intelligence and never overestimate their prior knowledge\"\n\n- @ezraklein",
-          "createdAt": "2026-10-15T19:29:56.000Z",
-          "url": "https://x.com/zarazhangrui/status/2110815456458412179",
-          "likes": 71,
-          "retweets": 6,
-          "replies": 8,
-          "isQuote": false,
-          "quotedTweetId": null
-        }
-      ]
-    }
-  ],
+  "x": [],
   "stats": {
-    "xBuilders": 4,
-    "totalTweets": 5,
-    "userLookupRequests": 7,
-    "userResourcesRead": 34,
+    "xBuilders": 0,
+    "totalTweets": 0,
+    "userLookupRequests": 0,
+    "userResourcesRead": 0,
     "timelineRequests": 34,
-    "tweetResourcesRead": 38
+    "tweetResourcesRead": 0
   }
 }
