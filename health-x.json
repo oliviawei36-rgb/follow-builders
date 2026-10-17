@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T15:01:46.942Z",
+  "generatedAt": "2026-10-17T00:02:24.278Z",
   "sources": [
     {
       "name": "Andrej Karpathy",
@@ -7,15 +7,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:43.824Z"
+      "checkedAt": "2026-10-17T00:02:18.140Z"
     },
     {
       "name": "Swyx",
       "handle": "swyx",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:43.894Z"
+      "status": "ok",
+      "count": 5,
+      "checkedAt": "2026-10-17T00:02:18.247Z"
     },
     {
       "name": "Josh Woodward",
@@ -23,31 +23,31 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:43.962Z"
+      "checkedAt": "2026-10-17T00:02:18.523Z"
     },
     {
       "name": "Boris Cherny",
       "handle": "bcherny",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.029Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-17T00:02:18.624Z"
     },
     {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.131Z"
+      "status": "ok",
+      "count": 3,
+      "checkedAt": "2026-10-17T00:02:18.968Z"
     },
     {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.214Z"
+      "status": "ok",
+      "count": 4,
+      "checkedAt": "2026-10-17T00:02:19.266Z"
     },
     {
       "name": "Nan Yu",
@@ -55,7 +55,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.294Z"
+      "checkedAt": "2026-10-17T00:02:19.546Z"
     },
     {
       "name": "Madhu Guru",
@@ -63,15 +63,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.375Z"
+      "checkedAt": "2026-10-17T00:02:19.622Z"
     },
     {
       "name": "Amanda Askell",
       "handle": "AmandaAskell",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.475Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-17T00:02:19.710Z"
     },
     {
       "name": "Cat Wu",
@@ -79,7 +79,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.547Z"
+      "checkedAt": "2026-10-17T00:02:19.995Z"
     },
     {
       "name": "Thariq",
@@ -87,7 +87,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.617Z"
+      "checkedAt": "2026-10-17T00:02:20.088Z"
     },
     {
       "name": "Google Labs",
@@ -95,23 +95,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.706Z"
+      "checkedAt": "2026-10-17T00:02:20.168Z"
     },
     {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.774Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-17T00:02:20.263Z"
     },
     {
       "name": "Guillermo Rauch",
       "handle": "rauchg",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.861Z"
+      "status": "ok",
+      "count": 3,
+      "checkedAt": "2026-10-17T00:02:20.573Z"
     },
     {
       "name": "Alex Albert",
@@ -119,7 +119,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:44.941Z"
+      "checkedAt": "2026-10-17T00:02:20.852Z"
     },
     {
       "name": "Aaron Levie",
@@ -127,7 +127,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.027Z"
+      "checkedAt": "2026-10-17T00:02:20.931Z"
     },
     {
       "name": "Ryo Lu",
@@ -135,23 +135,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.107Z"
+      "checkedAt": "2026-10-17T00:02:21.006Z"
     },
     {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.194Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-17T00:02:21.099Z"
     },
     {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.265Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-17T00:02:21.403Z"
     },
     {
       "name": "Zara Zhang",
@@ -159,15 +159,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.344Z"
+      "checkedAt": "2026-10-17T00:02:21.678Z"
     },
     {
       "name": "Nikunj Kothari",
       "handle": "nikunj",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-10-16T15:01:45.447Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-17T00:02:21.756Z"
     },
     {
       "name": "Peter Steinberger",
@@ -175,39 +175,39 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.718Z"
+      "checkedAt": "2026-10-17T00:02:21.846Z"
     },
     {
       "name": "Dan Shipper",
       "handle": "danshipper",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.804Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-17T00:02:21.945Z"
     },
     {
       "name": "Aditya Agarwal",
       "handle": "adityaag",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.879Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-17T00:02:22.241Z"
     },
     {
       "name": "Sam Altman",
       "handle": "sama",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:45.944Z"
+      "status": "ok",
+      "count": 3,
+      "checkedAt": "2026-10-17T00:02:22.576Z"
     },
     {
       "name": "Claude",
       "handle": "claudeai",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.017Z"
+      "status": "ok",
+      "count": 5,
+      "checkedAt": "2026-10-17T00:02:22.894Z"
     },
     {
       "name": "Harvey",
@@ -215,7 +215,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.093Z"
+      "checkedAt": "2026-10-17T00:02:23.190Z"
     },
     {
       "name": "Winston Weinberg",
@@ -223,7 +223,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.164Z"
+      "checkedAt": "2026-10-17T00:02:23.265Z"
     },
     {
       "name": "Gabe Pereyra",
@@ -231,7 +231,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.232Z"
+      "checkedAt": "2026-10-17T00:02:23.340Z"
     },
     {
       "name": "Niko Grupen",
@@ -239,7 +239,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.302Z"
+      "checkedAt": "2026-10-17T00:02:23.436Z"
     },
     {
       "name": "Julio Pereyra",
@@ -247,7 +247,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.370Z"
+      "checkedAt": "2026-10-17T00:02:23.515Z"
     },
     {
       "name": "Spencer Poff",
@@ -255,7 +255,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.440Z"
+      "checkedAt": "2026-10-17T00:02:23.592Z"
     },
     {
       "name": "Vasudha Rengarajan",
@@ -263,23 +263,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.514Z"
+      "checkedAt": "2026-10-17T00:02:23.670Z"
     },
     {
       "name": "Calvin Qi",
       "handle": "calvincongelado",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-16T15:01:46.600Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-17T00:02:23.766Z"
     },
     {
       "name": "TypeSafe AI",
       "handle": "typesafeai",
       "module": "X",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-10-16T15:01:46.706Z"
+      "count": 1,
+      "checkedAt": "2026-10-17T00:02:24.068Z"
     }
   ]
 }
