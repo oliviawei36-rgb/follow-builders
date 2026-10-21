@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-10-20T01:51:31.325Z",
+  "generatedAt": "2026-10-21T01:38:27.946Z",
   "lookbackHours": 72,
   "blogs": [],
   "sourceHealth": [
     {
       "name": "Anthropic Engineering",
       "module": "AI 公司博客及产品更新",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-10-20T01:51:31.326Z"
+      "reason": "Blog: Article index could not be parsed for Anthropic Engineering",
+      "checkedAt": "2026-10-21T01:38:27.946Z"
     },
     {
       "name": "Claude Blog",
@@ -16,13 +17,14 @@
       "status": "error",
       "count": 0,
       "reason": "Blog: Article index could not be parsed for Claude Blog",
-      "checkedAt": "2026-10-20T01:51:31.326Z"
+      "checkedAt": "2026-10-21T01:38:27.946Z"
     }
   ],
   "stats": {
     "blogPosts": 0
   },
   "errors": [
+    "Blog: Article index could not be parsed for Anthropic Engineering",
     "Blog: Article index could not be parsed for Claude Blog"
   ]
 }
