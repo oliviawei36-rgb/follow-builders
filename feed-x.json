@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T00:11:16.986Z",
+  "generatedAt": "2026-10-29T02:28:19.785Z",
   "lookbackHours": 24,
   "x": [
     {
@@ -18,6 +18,17 @@
           "replies": 36,
           "isQuote": true,
           "quotedTweetId": "2115104790262796305"
+        },
+        {
+          "id": "2115624308567658713",
+          "text": "Gemini #1 on AAv5???\n\nthis is making me open up @antigravity for the first time in a long time. i’m getting an early review, will report back soon.\n\nif google actually pulls this off it is officially comeback season with Meta, Grok and now GDM being cool again. \n\n@saranormous talked about model neurodiversity last year. we have roughly 2x more frontier labs than when she was last on the aie stage. absolutely bizarre counter example to the bitter lesson.",
+          "createdAt": "2026-10-29T01:58:36.000Z",
+          "url": "https://x.com/swyx/status/2115624308567658713",
+          "likes": 34,
+          "retweets": 0,
+          "replies": 35,
+          "isQuote": true,
+          "quotedTweetId": "2115494553780367384"
         }
       ]
     },
@@ -48,6 +59,17 @@
           "replies": 72,
           "isQuote": true,
           "quotedTweetId": "2115489219804352921"
+        },
+        {
+          "id": "2115603212304843230",
+          "text": "@Strava You can turn it on here: https://t.co/wAEcM3IYP1",
+          "createdAt": "2026-10-29T00:34:46.000Z",
+          "url": "https://x.com/joshwoodward/status/2115603212304843230",
+          "likes": 4,
+          "retweets": 0,
+          "replies": 0,
+          "isQuote": false,
+          "quotedTweetId": null
         }
       ]
     },
@@ -130,6 +152,17 @@
           "replies": 448,
           "isQuote": false,
           "quotedTweetId": null
+        },
+        {
+          "id": "2115622002581188681",
+          "text": "Day 24/ Text your dot just like anyone else. Makes it super easy to share/forward things, leave it voice notes or you can even go creative with \"Hey Siri, text Iggy to &lt;INSERT WILD REQUEST&gt;\" and sit back and relax. https://t.co/T4t4m1m6DV",
+          "createdAt": "2026-10-29T01:49:26.000Z",
+          "url": "https://x.com/thsottiaux/status/2115622002581188681",
+          "likes": 1117,
+          "retweets": 48,
+          "replies": 743,
+          "isQuote": true,
+          "quotedTweetId": "2115496387613786374"
         }
       ]
     },
@@ -477,6 +510,17 @@
           "replies": 2,
           "isQuote": false,
           "quotedTweetId": null
+        },
+        {
+          "id": "2115613336200998979",
+          "text": "Been sharing this feedback to a lot of seed founders on how to bridge the gap between their dream to what is often required at the A from someone who sits on the other side of the table.. \n\nThanks @dflieb, @adityaag &amp; a few seed founders for reviewing drafts of this! https://t.co/e6k8pyXGc5",
+          "createdAt": "2026-10-29T01:15:00.000Z",
+          "url": "https://x.com/nikunj/status/2115613336200998979",
+          "likes": 7,
+          "retweets": 0,
+          "replies": 1,
+          "isQuote": true,
+          "quotedTweetId": "2115583054530171227"
         }
       ]
     },
@@ -668,7 +712,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:09.337Z"
+      "checkedAt": "2026-10-29T02:28:16.133Z"
     },
     {
       "name": "Swyx",
@@ -676,39 +720,39 @@
       "module": "X",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-10-29T00:11:09.446Z"
+      "checkedAt": "2026-10-29T02:28:16.279Z"
     },
     {
       "name": "Josh Woodward",
       "handle": "joshwoodward",
       "module": "X",
       "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:09.806Z"
+      "count": 1,
+      "checkedAt": "2026-10-29T02:28:16.575Z"
     },
     {
       "name": "Boris Cherny",
       "handle": "bcherny",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-10-29T00:11:10.126Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:16.840Z"
     },
     {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-10-29T00:11:10.448Z"
+      "count": 1,
+      "checkedAt": "2026-10-29T02:28:16.931Z"
     },
     {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
-      "status": "ok",
-      "count": 4,
-      "checkedAt": "2026-10-29T00:11:10.779Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:17.213Z"
     },
     {
       "name": "Nan Yu",
@@ -716,7 +760,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:11.071Z"
+      "checkedAt": "2026-10-29T02:28:17.288Z"
     },
     {
       "name": "Madhu Guru",
@@ -724,7 +768,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:11.161Z"
+      "checkedAt": "2026-10-29T02:28:17.375Z"
     },
     {
       "name": "Amanda Askell",
@@ -732,7 +776,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:11.249Z"
+      "checkedAt": "2026-10-29T02:28:17.452Z"
     },
     {
       "name": "Cat Wu",
@@ -740,15 +784,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:11.354Z"
+      "checkedAt": "2026-10-29T02:28:17.525Z"
     },
     {
       "name": "Thariq",
       "handle": "trq212",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:11.456Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:17.595Z"
     },
     {
       "name": "Google Labs",
@@ -756,23 +800,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:11.743Z"
+      "checkedAt": "2026-10-29T02:28:17.681Z"
     },
     {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "ok",
-      "count": 4,
-      "checkedAt": "2026-10-29T00:11:11.899Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:17.773Z"
     },
     {
       "name": "Guillermo Rauch",
       "handle": "rauchg",
       "module": "X",
-      "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-10-29T00:11:12.228Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:17.843Z"
     },
     {
       "name": "Alex Albert",
@@ -780,15 +824,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:12.517Z"
+      "checkedAt": "2026-10-29T02:28:17.917Z"
     },
     {
       "name": "Aaron Levie",
       "handle": "levie",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:12.629Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:18.000Z"
     },
     {
       "name": "Ryo Lu",
@@ -796,31 +840,31 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:12.958Z"
+      "checkedAt": "2026-10-29T02:28:18.093Z"
     },
     {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:13.075Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:18.171Z"
     },
     {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-10-29T00:11:13.403Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:18.246Z"
     },
     {
       "name": "Zara Zhang",
       "handle": "zarazhangrui",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:13.718Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:18.329Z"
     },
     {
       "name": "Nikunj Kothari",
@@ -828,15 +872,15 @@
       "module": "X",
       "status": "ok",
       "count": 1,
-      "checkedAt": "2026-10-29T00:11:14.023Z"
+      "checkedAt": "2026-10-29T02:28:18.424Z"
     },
     {
       "name": "Peter Steinberger",
       "handle": "steipete",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-10-29T00:11:14.384Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:18.704Z"
     },
     {
       "name": "Dan Shipper",
@@ -844,15 +888,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:14.687Z"
+      "checkedAt": "2026-10-29T02:28:18.786Z"
     },
     {
       "name": "Aditya Agarwal",
       "handle": "adityaag",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-10-29T00:11:14.815Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:18.861Z"
     },
     {
       "name": "Sam Altman",
@@ -860,23 +904,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:15.111Z"
+      "checkedAt": "2026-10-29T02:28:18.937Z"
     },
     {
       "name": "Claude",
       "handle": "claudeai",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:15.243Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:19.015Z"
     },
     {
       "name": "Harvey",
       "handle": "harvey",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-10-29T00:11:15.573Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:19.101Z"
     },
     {
       "name": "Winston Weinberg",
@@ -884,15 +928,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:15.862Z"
+      "checkedAt": "2026-10-29T02:28:19.175Z"
     },
     {
       "name": "Gabe Pereyra",
       "handle": "gabepereyra",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-10-29T00:11:16.021Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:19.262Z"
     },
     {
       "name": "Niko Grupen",
@@ -900,7 +944,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:16.314Z"
+      "checkedAt": "2026-10-29T02:28:19.353Z"
     },
     {
       "name": "Julio Pereyra",
@@ -908,7 +952,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:16.399Z"
+      "checkedAt": "2026-10-29T02:28:19.431Z"
     },
     {
       "name": "Spencer Poff",
@@ -916,7 +960,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:16.489Z"
+      "checkedAt": "2026-10-29T02:28:19.502Z"
     },
     {
       "name": "Vasudha Rengarajan",
@@ -924,7 +968,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:16.577Z"
+      "checkedAt": "2026-10-29T02:28:19.582Z"
     },
     {
       "name": "Calvin Qi",
@@ -932,23 +976,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-29T00:11:16.662Z"
+      "checkedAt": "2026-10-29T02:28:19.655Z"
     },
     {
       "name": "TypeSafe AI",
       "handle": "typesafeai",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-10-29T00:11:16.769Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-10-29T02:28:19.767Z"
     }
   ],
   "stats": {
     "xBuilders": 19,
-    "totalTweets": 46,
+    "totalTweets": 50,
     "userLookupRequests": 0,
     "userResourcesRead": 0,
     "timelineRequests": 35,
-    "tweetResourcesRead": 46
+    "tweetResourcesRead": 4
   }
 }
