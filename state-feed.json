@@ -269,7 +269,53 @@
     "2115209914541039656": 1793148672159,
     "2115206780515192929": 1793148672159,
     "2115169279155011747": 1793148672159,
-    "2115112034035433481": 1793148672159
+    "2115112034035433481": 1793148672159,
+    "2115341903311024395": 1793232669446,
+    "2115580552170627080": 1793232669806,
+    "2115495943948902517": 1793232669806,
+    "2115491259381072269": 1793232670126,
+    "2115588390414581916": 1793232670448,
+    "2115473170279080149": 1793232670448,
+    "2115330127886463244": 1793232670448,
+    "2115297093879472332": 1793232670448,
+    "2115273253711409208": 1793232670448,
+    "2115556794076741647": 1793232670779,
+    "2115528989414760880": 1793232670779,
+    "2115319325137731757": 1793232670779,
+    "2115309642209436057": 1793232670779,
+    "2115544056038350960": 1793232671456,
+    "2115493334324310463": 1793232671456,
+    "2115565321201520994": 1793232671899,
+    "2115565072734888447": 1793232671899,
+    "2115497454552441336": 1793232671899,
+    "2115485095251308740": 1793232671899,
+    "2115573969369845855": 1793232672228,
+    "2115566139447382115": 1793232672228,
+    "2115539426684408300": 1793232672228,
+    "2115504493026812164": 1793232672228,
+    "2115464861534834735": 1793232672228,
+    "2115516370695987435": 1793232672630,
+    "2115305369799110905": 1793232672630,
+    "2115517748860375286": 1793232673075,
+    "2115476658212004118": 1793232673075,
+    "2115596406077452628": 1793232673403,
+    "2115539958123376855": 1793232673403,
+    "2115417700059304019": 1793232673403,
+    "2115336629770707254": 1793232673718,
+    "2115288579173921266": 1793232673718,
+    "2115583054530171227": 1793232674023,
+    "2115398725212238088": 1793232674384,
+    "2115397368229060636": 1793232674384,
+    "2115380217938158049": 1793232674384,
+    "2115486597739430004": 1793232674815,
+    "2115467193626571174": 1793232675243,
+    "2115467192276025500": 1793232675243,
+    "2115482995801072018": 1793232675573,
+    "2115469891184558291": 1793232675573,
+    "2115414566511505808": 1793232675573,
+    "2115464803716390967": 1793232676021,
+    "2115590372927889553": 1793232676769,
+    "2115515784722071876": 1793232676769
   },
   "seenVideos": {},
   "seenArticles": {},
@@ -486,35 +532,35 @@
     }
   },
   "xSinceIds": {
-    "bcherny": "2113333859907747871",
-    "thsottiaux": "2114800277677092936",
-    "petergyang": "2115239304092106772",
+    "bcherny": "2115491259381072269",
+    "thsottiaux": "2115588390414581916",
+    "petergyang": "2115556794076741647",
     "thenanyu": "2114800172270252037",
     "amandaaskell": "2111607047653634331",
-    "rauchg": "2115218670389756243",
-    "levie": "2114761816199098587",
-    "garrytan": "2115215790756794496",
-    "mattturck": "2115132327131328806",
-    "zarazhangrui": "2114255477907570865",
-    "steipete": "2114879798434758905",
+    "rauchg": "2115573969369845855",
+    "levie": "2115516370695987435",
+    "garrytan": "2115517748860375286",
+    "mattturck": "2115596406077452628",
+    "zarazhangrui": "2115336629770707254",
+    "steipete": "2115398725212238088",
     "danshipper": "2115112705162182754",
-    "adityaag": "2115119516191801809",
-    "harvey": "2114688888614924355",
+    "adityaag": "2115486597739430004",
+    "harvey": "2115482995801072018",
     "nikogrupen": "2112918720767303931",
-    "nikunj": "2115157188704612735",
-    "typesafeai": "2115210041888559316",
-    "swyx": "2115156135875629109",
-    "amasad": "2115207856496480261",
+    "nikunj": "2115583054530171227",
+    "typesafeai": "2115590372927889553",
+    "swyx": "2115341903311024395",
+    "amasad": "2115565321201520994",
     "sama": "2114818620782248024",
-    "claudeai": "2114780227465338985",
+    "claudeai": "2115467193626571174",
     "calvincongelado": "2112983508104687791",
     "ryolu_": "2114187660734668884",
-    "trq212": "2115188992861970693",
-    "joshwoodward": "2114840670016065576",
+    "trq212": "2115544056038350960",
+    "joshwoodward": "2115580552170627080",
     "googlelabs": "2113340712523841696",
     "_catwu": "2112988751576330487",
     "winstonweinberg": "2112926497006854445",
-    "gabepereyra": "2115126114851193016",
+    "gabepereyra": "2115464803716390967",
     "alexalbert__": "2114145722320969943",
     "realmadhuguru": "2113437016818057641"
   },
@@ -522,7 +568,7 @@
     "userLookupRequests": 0,
     "userResourcesRead": 0,
     "timelineRequests": 35,
-    "tweetResourcesRead": 0
+    "tweetResourcesRead": 46
   },
   "lastXSourceHealth": {
     "karpathy": {
@@ -531,47 +577,47 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:54.690Z"
+      "checkedAt": "2026-10-29T00:11:09.337Z"
     },
     "swyx": {
       "name": "Swyx",
       "handle": "swyx",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:54.776Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-29T00:11:09.446Z"
     },
     "joshwoodward": {
       "name": "Josh Woodward",
       "handle": "joshwoodward",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:54.847Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:09.806Z"
     },
     "bcherny": {
       "name": "Boris Cherny",
       "handle": "bcherny",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:54.944Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-29T00:11:10.126Z"
     },
     "thsottiaux": {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.023Z"
+      "status": "ok",
+      "count": 5,
+      "checkedAt": "2026-10-29T00:11:10.448Z"
     },
     "petergyang": {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.100Z"
+      "status": "ok",
+      "count": 4,
+      "checkedAt": "2026-10-29T00:11:10.779Z"
     },
     "thenanyu": {
       "name": "Nan Yu",
@@ -579,7 +625,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.177Z"
+      "checkedAt": "2026-10-29T00:11:11.071Z"
     },
     "realmadhuguru": {
       "name": "Madhu Guru",
@@ -587,7 +633,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.257Z"
+      "checkedAt": "2026-10-29T00:11:11.161Z"
     },
     "amandaaskell": {
       "name": "Amanda Askell",
@@ -595,7 +641,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.329Z"
+      "checkedAt": "2026-10-29T00:11:11.249Z"
     },
     "_catwu": {
       "name": "Cat Wu",
@@ -603,15 +649,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.402Z"
+      "checkedAt": "2026-10-29T00:11:11.354Z"
     },
     "trq212": {
       "name": "Thariq",
       "handle": "trq212",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.473Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:11.456Z"
     },
     "googlelabs": {
       "name": "Google Labs",
@@ -619,23 +665,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.543Z"
+      "checkedAt": "2026-10-29T00:11:11.743Z"
     },
     "amasad": {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.614Z"
+      "status": "ok",
+      "count": 4,
+      "checkedAt": "2026-10-29T00:11:11.899Z"
     },
     "rauchg": {
       "name": "Guillermo Rauch",
       "handle": "rauchg",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.687Z"
+      "status": "ok",
+      "count": 5,
+      "checkedAt": "2026-10-29T00:11:12.228Z"
     },
     "alexalbert__": {
       "name": "Alex Albert",
@@ -643,15 +689,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.762Z"
+      "checkedAt": "2026-10-29T00:11:12.517Z"
     },
     "levie": {
       "name": "Aaron Levie",
       "handle": "levie",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.833Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:12.629Z"
     },
     "ryolu_": {
       "name": "Ryo Lu",
@@ -659,47 +705,47 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.901Z"
+      "checkedAt": "2026-10-29T00:11:12.958Z"
     },
     "garrytan": {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:55.972Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:13.075Z"
     },
     "mattturck": {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.045Z"
+      "status": "ok",
+      "count": 3,
+      "checkedAt": "2026-10-29T00:11:13.403Z"
     },
     "zarazhangrui": {
       "name": "Zara Zhang",
       "handle": "zarazhangrui",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.126Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:13.718Z"
     },
     "nikunj": {
       "name": "Nikunj Kothari",
       "handle": "nikunj",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.210Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-29T00:11:14.023Z"
     },
     "steipete": {
       "name": "Peter Steinberger",
       "handle": "steipete",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.285Z"
+      "status": "ok",
+      "count": 3,
+      "checkedAt": "2026-10-29T00:11:14.384Z"
     },
     "danshipper": {
       "name": "Dan Shipper",
@@ -707,15 +753,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.365Z"
+      "checkedAt": "2026-10-29T00:11:14.687Z"
     },
     "adityaag": {
       "name": "Aditya Agarwal",
       "handle": "adityaag",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.441Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-29T00:11:14.815Z"
     },
     "sama": {
       "name": "Sam Altman",
@@ -723,23 +769,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.518Z"
+      "checkedAt": "2026-10-29T00:11:15.111Z"
     },
     "claudeai": {
       "name": "Claude",
       "handle": "claudeai",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.592Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:15.243Z"
     },
     "harvey": {
       "name": "Harvey",
       "handle": "harvey",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.669Z"
+      "status": "ok",
+      "count": 3,
+      "checkedAt": "2026-10-29T00:11:15.573Z"
     },
     "winstonweinberg": {
       "name": "Winston Weinberg",
@@ -747,15 +793,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.739Z"
+      "checkedAt": "2026-10-29T00:11:15.862Z"
     },
     "gabepereyra": {
       "name": "Gabe Pereyra",
       "handle": "gabepereyra",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.811Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-10-29T00:11:16.021Z"
     },
     "nikogrupen": {
       "name": "Niko Grupen",
@@ -763,7 +809,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.883Z"
+      "checkedAt": "2026-10-29T00:11:16.314Z"
     },
     "itsjuliopereyra": {
       "name": "Julio Pereyra",
@@ -771,7 +817,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:56.957Z"
+      "checkedAt": "2026-10-29T00:11:16.399Z"
     },
     "spencerpoff": {
       "name": "Spencer Poff",
@@ -779,7 +825,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:57.030Z"
+      "checkedAt": "2026-10-29T00:11:16.489Z"
     },
     "vtrengarajan": {
       "name": "Vasudha Rengarajan",
@@ -787,7 +833,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:57.117Z"
+      "checkedAt": "2026-10-29T00:11:16.577Z"
     },
     "calvincongelado": {
       "name": "Calvin Qi",
@@ -795,15 +841,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-10-28T02:18:57.190Z"
+      "checkedAt": "2026-10-29T00:11:16.662Z"
     },
     "typesafeai": {
       "name": "TypeSafe AI",
       "handle": "typesafeai",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-10-28T02:18:57.261Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-10-29T00:11:16.769Z"
     }
   }
 }
