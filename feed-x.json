@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T00:07:45.941Z",
+  "generatedAt": "2026-11-04T03:01:42.113Z",
   "lookbackHours": 24,
   "x": [
     {
@@ -139,6 +139,17 @@
           "likes": 1,
           "retweets": 0,
           "replies": 0,
+          "isQuote": true,
+          "quotedTweetId": "2117638801296380159"
+        },
+        {
+          "id": "2117783921748558185",
+          "text": "Think about how much time we all waste waiting on hold or trying to navigate legacy phone systems (\"say 1 to proceed\" 🤮).\n\nThat's why I love Grok @Bot's new phone call feature. Try it with these 5 use cases:\n\n1. Negotiate any bill\n\n\"Call Comcast about my internet bill. I pay $84 a month and a competitor offers $49. Ask for a lower price.\"\n\n2. Cancel subscriptions\n\n\"Call my gym and cancel my membership. Here's my account info. Turn down any retention offers and get a confirmation number.\"\n\n3. Wait on hold\n\n\"Call the airline about my canceled flight. Here's my confirmation code. Stay on hold until you reach a person, then ask for a full refund.\"\n\n4. Make reservations\n\n\"Call this restaurant and book a table for 4 on Friday at 7pm. If that's taken, anything between 6 and 8 works.\"\n\n5. Get contractor quotes\n\n\"Call these 3 contractors about replacing my water heater. Ask each one for price and earliest start date. Then put the answers in a table.\"\n\nNote that this only works with US numbers for now but it's nevertheless a game changer.\n\n📌 Watch my new video to see how it works with a real call: https://t.co/UWt3SanRSN",
+          "createdAt": "2026-11-04T01:00:08.000Z",
+          "url": "https://x.com/petergyang/status/2117783921748558185",
+          "likes": 22,
+          "retweets": 0,
+          "replies": 16,
           "isQuote": true,
           "quotedTweetId": "2117638801296380159"
         }
@@ -302,6 +313,17 @@
           "replies": 89,
           "isQuote": true,
           "quotedTweetId": "2117645359082315988"
+        },
+        {
+          "id": "2117802827519250568",
+          "text": "`𝚟𝚎𝚛𝚌𝚎𝚕 𝚍𝚘𝚌𝚝𝚘𝚛` - recommend you ship doctor subcommands in your CLIs! https://t.co/FNMGWNOZpC https://t.co/CrTZIJnvgb",
+          "createdAt": "2026-11-04T02:15:15.000Z",
+          "url": "https://x.com/rauchg/status/2117802827519250568",
+          "likes": 86,
+          "retweets": 2,
+          "replies": 28,
+          "isQuote": true,
+          "quotedTweetId": "2117725049713308146"
         }
       ]
     },
@@ -433,6 +455,28 @@
           "replies": 19,
           "isQuote": false,
           "quotedTweetId": null
+        },
+        {
+          "id": "2117786890070024506",
+          "text": "Love X but man the dead internet theory feels so real seeing all these bots https://t.co/AXZfDtlQij",
+          "createdAt": "2026-11-04T01:11:55.000Z",
+          "url": "https://x.com/nikunj/status/2117786890070024506",
+          "likes": 1,
+          "retweets": 0,
+          "replies": 0,
+          "isQuote": false,
+          "quotedTweetId": null
+        },
+        {
+          "id": "2117773647868018897",
+          "text": "My two favorite default skills on Claude Code, still, that seem relatively less used are a) /insights and b) /playground..\n\nFor insights, I have a regular cron job that runs this now every two weeks. It tells me all the best ways to upgrade my setup. I pair it with X bookmarks that show all the new ways to build a software factory. It's a self improving loop on how I use Claude Code + what the industry thinks I should move to. \n\nFor playground, it's the best way to visualize what's happening in the workflow. I ask it to show me architecture of esoteric Github's to simulating a full learning loop on my side project. My new favorite thing is to pair Codex + Claude Code on this skill and ask it to find dead code, hot pathways, latency improvements.\n\nGive it a shot and tell me what you think!",
+          "createdAt": "2026-11-04T00:19:18.000Z",
+          "url": "https://x.com/nikunj/status/2117773647868018897",
+          "likes": 50,
+          "retweets": 0,
+          "replies": 32,
+          "isQuote": false,
+          "quotedTweetId": null
         }
       ]
     },
@@ -473,6 +517,93 @@
           "quotedTweetId": "2117611517545775320"
         }
       ]
+    },
+    {
+      "source": "x",
+      "name": "Nan Yu",
+      "handle": "thenanyu",
+      "bio": "product, codex @openai. prev head of product @linear",
+      "tweets": [
+        {
+          "id": "2117772729248354593",
+          "text": "Wow Mom, yoy. https://t.co/qfl5dzVNeF",
+          "createdAt": "2026-11-04T00:15:39.000Z",
+          "url": "https://x.com/thenanyu/status/2117772729248354593",
+          "likes": 8,
+          "retweets": 0,
+          "replies": 1,
+          "isQuote": true,
+          "quotedTweetId": "2117677564894367917"
+        },
+        {
+          "id": "2117772378402922650",
+          "text": "Super-retweet https://t.co/2NORPkK5ds",
+          "createdAt": "2026-11-04T00:14:15.000Z",
+          "url": "https://x.com/thenanyu/status/2117772378402922650",
+          "likes": 34,
+          "retweets": 0,
+          "replies": 1,
+          "isQuote": true,
+          "quotedTweetId": "2117433332883767625"
+        }
+      ]
+    },
+    {
+      "source": "x",
+      "name": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "bio": "Builder. Make something people want, then make people want it. Harvard’17. GitHub: https://t.co/KCuEajezlL \nYouTube: https://t.co/8xzbGWtf6w",
+      "tweets": [
+        {
+          "id": "2117776720606716157",
+          "text": "A presentation can feel like embroidery 🪡 https://t.co/ytBdA9PNUU",
+          "createdAt": "2026-11-04T00:31:31.000Z",
+          "url": "https://x.com/zarazhangrui/status/2117776720606716157",
+          "likes": 23,
+          "retweets": 2,
+          "replies": 4,
+          "isQuote": false,
+          "quotedTweetId": null
+        }
+      ]
+    },
+    {
+      "source": "x",
+      "name": "Sam Altman",
+      "handle": "sama",
+      "bio": "The mission of OpenAI is to ensure that AGI benefits all of humanity",
+      "tweets": [
+        {
+          "id": "2117794005165748448",
+          "text": "People should always be in control of the future.\n\nOpenAI is against the notion that it would be acceptable for people to be relegated to a role of doing things that “AI systems think makes sense to reward in humans”.\n\nPeople should not cede control of the future to superintelligence, and that requirement should ultimately constrain AI progress.",
+          "createdAt": "2026-11-04T01:40:12.000Z",
+          "url": "https://x.com/sama/status/2117794005165748448",
+          "likes": 4003,
+          "retweets": 227,
+          "replies": 794,
+          "isQuote": false,
+          "quotedTweetId": null
+        }
+      ]
+    },
+    {
+      "source": "x",
+      "name": "Calvin Qi",
+      "handle": "calvincongelado",
+      "bio": "Memeber of Technical Staff @harvey. previously AI @glean, @SambaNovaAI",
+      "tweets": [
+        {
+          "id": "2117775475556880846",
+          "text": "Harvey 2? why don't you Harvey go 2 the polls https://t.co/fiWXyiR3l8",
+          "createdAt": "2026-11-04T00:26:34.000Z",
+          "url": "https://x.com/calvincongelado/status/2117775475556880846",
+          "likes": 9,
+          "retweets": 0,
+          "replies": 0,
+          "isQuote": true,
+          "quotedTweetId": "2115482995801072018"
+        }
+      ]
     }
   ],
   "sourceHealth": [
@@ -482,15 +613,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:39.096Z"
+      "checkedAt": "2026-11-04T03:01:37.123Z"
     },
     {
       "name": "Swyx",
       "handle": "swyx",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-04T00:07:39.214Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:37.220Z"
     },
     {
       "name": "Josh Woodward",
@@ -498,39 +629,39 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:39.515Z"
+      "checkedAt": "2026-11-04T03:01:37.309Z"
     },
     {
       "name": "Boris Cherny",
       "handle": "bcherny",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:39.622Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:37.402Z"
     },
     {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-04T00:07:40.240Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:37.494Z"
     },
     {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-04T00:07:40.555Z"
+      "count": 1,
+      "checkedAt": "2026-11-04T03:01:37.649Z"
     },
     {
       "name": "Nan Yu",
       "handle": "thenanyu",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-04T00:07:40.844Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-11-04T03:01:37.975Z"
     },
     {
       "name": "Madhu Guru",
@@ -538,7 +669,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:40.951Z"
+      "checkedAt": "2026-11-04T03:01:38.262Z"
     },
     {
       "name": "Amanda Askell",
@@ -546,47 +677,47 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:41.034Z"
+      "checkedAt": "2026-11-04T03:01:38.350Z"
     },
     {
       "name": "Cat Wu",
       "handle": "_catwu",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:41.138Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:38.438Z"
     },
     {
       "name": "Thariq",
       "handle": "trq212",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:41.436Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:38.528Z"
     },
     {
       "name": "Google Labs",
       "handle": "GoogleLabs",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:41.745Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:38.615Z"
     },
     {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "ok",
-      "count": 4,
-      "checkedAt": "2026-11-04T00:07:42.090Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:38.704Z"
     },
     {
       "name": "Guillermo Rauch",
       "handle": "rauchg",
       "module": "X",
       "status": "ok",
-      "count": 4,
-      "checkedAt": "2026-11-04T00:07:42.408Z"
+      "count": 1,
+      "checkedAt": "2026-11-04T03:01:38.820Z"
     },
     {
       "name": "Alex Albert",
@@ -594,15 +725,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:42.691Z"
+      "checkedAt": "2026-11-04T03:01:39.108Z"
     },
     {
       "name": "Aaron Levie",
       "handle": "levie",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:42.840Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:39.190Z"
     },
     {
       "name": "Ryo Lu",
@@ -610,55 +741,55 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:43.126Z"
+      "checkedAt": "2026-11-04T03:01:39.278Z"
     },
     {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
-      "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-04T00:07:43.264Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:39.367Z"
     },
     {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-04T00:07:43.624Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:39.505Z"
     },
     {
       "name": "Zara Zhang",
       "handle": "zarazhangrui",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-04T00:07:43.908Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-11-04T03:01:39.635Z"
     },
     {
       "name": "Nikunj Kothari",
       "handle": "nikunj",
       "module": "X",
       "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:44.060Z"
+      "count": 2,
+      "checkedAt": "2026-11-04T03:01:40.019Z"
     },
     {
       "name": "Peter Steinberger",
       "handle": "steipete",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:44.368Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:40.356Z"
     },
     {
       "name": "Dan Shipper",
       "handle": "danshipper",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-04T00:07:44.675Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-04T03:01:40.444Z"
     },
     {
       "name": "Aditya Agarwal",
@@ -666,15 +797,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:44.963Z"
+      "checkedAt": "2026-11-04T03:01:40.531Z"
     },
     {
       "name": "Sam Altman",
       "handle": "sama",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.050Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-11-04T03:01:40.680Z"
     },
     {
       "name": "Claude",
@@ -682,7 +813,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.137Z"
+      "checkedAt": "2026-11-04T03:01:40.964Z"
     },
     {
       "name": "Harvey",
@@ -690,7 +821,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.216Z"
+      "checkedAt": "2026-11-04T03:01:41.054Z"
     },
     {
       "name": "Winston Weinberg",
@@ -698,7 +829,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.311Z"
+      "checkedAt": "2026-11-04T03:01:41.147Z"
     },
     {
       "name": "Gabe Pereyra",
@@ -706,7 +837,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.397Z"
+      "checkedAt": "2026-11-04T03:01:41.239Z"
     },
     {
       "name": "Niko Grupen",
@@ -714,7 +845,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.485Z"
+      "checkedAt": "2026-11-04T03:01:41.333Z"
     },
     {
       "name": "Julio Pereyra",
@@ -722,7 +853,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.585Z"
+      "checkedAt": "2026-11-04T03:01:41.530Z"
     },
     {
       "name": "Spencer Poff",
@@ -730,7 +861,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.670Z"
+      "checkedAt": "2026-11-04T03:01:41.612Z"
     },
     {
       "name": "Vasudha Rengarajan",
@@ -738,15 +869,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.754Z"
+      "checkedAt": "2026-11-04T03:01:41.698Z"
     },
     {
       "name": "Calvin Qi",
       "handle": "calvincongelado",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.839Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-11-04T03:01:41.809Z"
     },
     {
       "name": "TypeSafe AI",
@@ -754,15 +885,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-04T00:07:45.924Z"
+      "checkedAt": "2026-11-04T03:01:42.096Z"
     }
   ],
   "stats": {
-    "xBuilders": 15,
-    "totalTweets": 32,
+    "xBuilders": 19,
+    "totalTweets": 41,
     "userLookupRequests": 0,
     "userResourcesRead": 0,
     "timelineRequests": 35,
-    "tweetResourcesRead": 32
+    "tweetResourcesRead": 9
   }
 }
