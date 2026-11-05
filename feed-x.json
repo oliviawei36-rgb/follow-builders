@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T03:31:05.706Z",
+  "generatedAt": "2026-11-05T08:14:06.294Z",
   "lookbackHours": 24,
   "x": [
     {
@@ -62,6 +62,39 @@
           "replies": 114,
           "isQuote": true,
           "quotedTweetId": "2118046765857546733"
+        },
+        {
+          "id": "2118251501214896570",
+          "text": "https://t.co/ymiFPRs7yB",
+          "createdAt": "2026-11-05T07:58:07.000Z",
+          "url": "https://x.com/swyx/status/2118251501214896570",
+          "likes": 1,
+          "retweets": 0,
+          "replies": 0,
+          "isQuote": true,
+          "quotedTweetId": "2118223980398276867"
+        },
+        {
+          "id": "2118246851136909731",
+          "text": "absolutely tearing up seeing AIE Shanghai kick off and SUCH INCREDIBLE EXECUTION from @StandupPartners. \n\nthe first AIE in China is actually happening!!!\n\nand its a packed room and a hot schedule featuring @ryolu_ , @Microsoft, @MiniMax_AI , @theworldlabs, @HeyGen , @ExaAILabs , @openclaw , @StepFun_ai , @liquidai , @youdotcom , @DynaRobotics , @baseten, @Meta , @OptiverGlobal , @ManusAI  and more.\n\nnot livestreamed because Reasons but you can bet we'll be posting up some videos and takes",
+          "createdAt": "2026-11-05T07:39:39.000Z",
+          "url": "https://x.com/swyx/status/2118246851136909731",
+          "likes": 38,
+          "retweets": 1,
+          "replies": 11,
+          "isQuote": true,
+          "quotedTweetId": "2118189766047109629"
+        },
+        {
+          "id": "2118208851506036989",
+          "text": "uhhh what, 3x faster 5x cheaper but evals SAME ON FRONTIERCODE 2\n\nthis is distillation without tradeoffs. i think @thinkymachines inkling is one of the most underrated base models in the world. expect to see a TON more of these esp on US pretrained models https://t.co/zvJFP9EIPL",
+          "createdAt": "2026-11-05T05:08:39.000Z",
+          "url": "https://x.com/swyx/status/2118208851506036989",
+          "likes": 94,
+          "retweets": 2,
+          "replies": 88,
+          "isQuote": true,
+          "quotedTweetId": "2118069614521241739"
         }
       ]
     },
@@ -125,6 +158,28 @@
           "replies": 374,
           "isQuote": true,
           "quotedTweetId": "2117999036175188183"
+        },
+        {
+          "id": "2118250631165300747",
+          "text": "Follow Samir for dot updates https://t.co/uxZ8ywsSmu",
+          "createdAt": "2026-11-05T07:54:40.000Z",
+          "url": "https://x.com/thsottiaux/status/2118250631165300747",
+          "likes": 246,
+          "retweets": 13,
+          "replies": 94,
+          "isQuote": true,
+          "quotedTweetId": "2118103057980690771"
+        },
+        {
+          "id": "2118248900381536740",
+          "text": "Privilege to work alongside so many amazing people who won’t rest until we materialize a better future. https://t.co/4OlLTnPWMt",
+          "createdAt": "2026-11-05T07:47:47.000Z",
+          "url": "https://x.com/thsottiaux/status/2118248900381536740",
+          "likes": 623,
+          "retweets": 26,
+          "replies": 153,
+          "isQuote": true,
+          "quotedTweetId": "2118151308758941998"
         }
       ]
     },
@@ -188,6 +243,17 @@
           "replies": 72,
           "isQuote": false,
           "quotedTweetId": null
+        },
+        {
+          "id": "2118197393229545534",
+          "text": "Was super fun hosting this event with my friends from @OpenAI and @Amplitude_HQ https://t.co/VVwHHCVofW https://t.co/TPdxuCYJxz",
+          "createdAt": "2026-11-05T04:23:07.000Z",
+          "url": "https://x.com/petergyang/status/2118197393229545534",
+          "likes": 22,
+          "retweets": 1,
+          "replies": 9,
+          "isQuote": true,
+          "quotedTweetId": "2118169474658648110"
         }
       ]
     },
@@ -357,6 +423,17 @@
           "replies": 28,
           "isQuote": true,
           "quotedTweetId": "2014965727695143045"
+        },
+        {
+          "id": "2118221083233206736",
+          "text": "GStack’s /review skill is actually useful for preventing bugs still https://t.co/aROfFOWDwK",
+          "createdAt": "2026-11-05T05:57:15.000Z",
+          "url": "https://x.com/garrytan/status/2118221083233206736",
+          "likes": 59,
+          "retweets": 4,
+          "replies": 41,
+          "isQuote": false,
+          "quotedTweetId": null
         }
       ]
     },
@@ -615,6 +692,44 @@
           "quotedTweetId": "2118023885648220319"
         }
       ]
+    },
+    {
+      "source": "x",
+      "name": "Ryo Lu",
+      "handle": "ryolu_",
+      "bio": "Designed @Cursor_ai, @NotionHQ, @Stripe, built startups. I make a world where anyone can make software. Aspiring k-pop idol.",
+      "tweets": [
+        {
+          "id": "2118207967728451760",
+          "text": "gave a talk at @aiDotEngineer shanghai about about a question i keep coming back to: when we can make anything, do we still know what we want?\n\ni want tools that help us find our own answers, not skip the process of forming them. not just more output, but more room to think, care, and make together.\n\nwill share more soon!",
+          "createdAt": "2026-11-05T05:05:08.000Z",
+          "url": "https://x.com/ryolu_/status/2118207967728451760",
+          "likes": 241,
+          "retweets": 8,
+          "replies": 16,
+          "isQuote": true,
+          "quotedTweetId": "2118197358601379910"
+        }
+      ]
+    },
+    {
+      "source": "x",
+      "name": "Niko Grupen",
+      "handle": "nikogrupen",
+      "bio": "Head of Applied Research @harvey",
+      "tweets": [
+        {
+          "id": "2118212192369881566",
+          "text": "New RSI paper from @alibaba_cloud research that uses @harvey LAB: Firm Knowledge for its main results.\n\nRecursa is a proposal for how to adapt agents to a new domain without human experts or a stronger teacher model -> write skills from knowledge documents, then have parallel learners practice on tasks and keep only the edits that help.\n\nLink: https://t.co/EVbNXorEJ2\n\nGlad to see LAB continuing to drive research progress, esp on continual learning. Nice work @ekzhu @Alibaba_Qwen",
+          "createdAt": "2026-11-05T05:21:55.000Z",
+          "url": "https://x.com/nikogrupen/status/2118212192369881566",
+          "likes": 31,
+          "retweets": 2,
+          "replies": 1,
+          "isQuote": true,
+          "quotedTweetId": "2118013221017968941"
+        }
+      ]
     }
   ],
   "sourceHealth": [
@@ -624,15 +739,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:30:58.675Z"
+      "checkedAt": "2026-11-05T08:14:03.131Z"
     },
     {
       "name": "Swyx",
       "handle": "swyx",
       "module": "X",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-05T03:30:58.802Z"
+      "count": 3,
+      "checkedAt": "2026-11-05T08:14:03.218Z"
     },
     {
       "name": "Josh Woodward",
@@ -640,7 +755,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:30:59.093Z"
+      "checkedAt": "2026-11-05T08:14:03.506Z"
     },
     {
       "name": "Boris Cherny",
@@ -648,31 +763,31 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:30:59.177Z"
+      "checkedAt": "2026-11-05T08:14:03.561Z"
     },
     {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-05T03:30:59.282Z"
+      "count": 2,
+      "checkedAt": "2026-11-05T08:14:03.632Z"
     },
     {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
       "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-05T03:30:59.579Z"
+      "count": 1,
+      "checkedAt": "2026-11-05T08:14:03.913Z"
     },
     {
       "name": "Nan Yu",
       "handle": "thenanyu",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:30:59.863Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:04.158Z"
     },
     {
       "name": "Madhu Guru",
@@ -680,7 +795,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:00.132Z"
+      "checkedAt": "2026-11-05T08:14:04.205Z"
     },
     {
       "name": "Amanda Askell",
@@ -688,23 +803,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:00.207Z"
+      "checkedAt": "2026-11-05T08:14:04.247Z"
     },
     {
       "name": "Cat Wu",
       "handle": "_catwu",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:00.342Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:04.339Z"
     },
     {
       "name": "Thariq",
       "handle": "trq212",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-05T03:31:00.633Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:04.390Z"
     },
     {
       "name": "Google Labs",
@@ -712,23 +827,23 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:00.900Z"
+      "checkedAt": "2026-11-05T08:14:04.433Z"
     },
     {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-05T03:31:01.032Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:04.478Z"
     },
     {
       "name": "Guillermo Rauch",
       "handle": "rauchg",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-05T03:31:01.325Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:04.528Z"
     },
     {
       "name": "Alex Albert",
@@ -736,7 +851,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:01.597Z"
+      "checkedAt": "2026-11-05T08:14:04.583Z"
     },
     {
       "name": "Aaron Levie",
@@ -744,63 +859,63 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:01.678Z"
+      "checkedAt": "2026-11-05T08:14:04.629Z"
     },
     {
       "name": "Ryo Lu",
       "handle": "ryolu_",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-05T03:31:01.749Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-11-05T08:14:04.703Z"
     },
     {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
       "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-05T03:31:01.884Z"
+      "count": 1,
+      "checkedAt": "2026-11-05T08:14:04.965Z"
     },
     {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-05T03:31:02.196Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.235Z"
     },
     {
       "name": "Zara Zhang",
       "handle": "zarazhangrui",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-05T03:31:02.533Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.283Z"
     },
     {
       "name": "Nikunj Kothari",
       "handle": "nikunj",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:02.864Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.327Z"
     },
     {
       "name": "Peter Steinberger",
       "handle": "steipete",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:03.152Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.444Z"
     },
     {
       "name": "Dan Shipper",
       "handle": "danshipper",
       "module": "X",
-      "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-05T03:31:03.447Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.489Z"
     },
     {
       "name": "Aditya Agarwal",
@@ -808,7 +923,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:03.719Z"
+      "checkedAt": "2026-11-05T08:14:05.535Z"
     },
     {
       "name": "Sam Altman",
@@ -816,7 +931,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:03.791Z"
+      "checkedAt": "2026-11-05T08:14:05.581Z"
     },
     {
       "name": "Claude",
@@ -824,15 +939,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:03.873Z"
+      "checkedAt": "2026-11-05T08:14:05.626Z"
     },
     {
       "name": "Harvey",
       "handle": "harvey",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:03.969Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.668Z"
     },
     {
       "name": "Winston Weinberg",
@@ -840,31 +955,31 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:04.247Z"
+      "checkedAt": "2026-11-05T08:14:05.712Z"
     },
     {
       "name": "Gabe Pereyra",
       "handle": "gabepereyra",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:04.380Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:05.753Z"
     },
     {
       "name": "Niko Grupen",
       "handle": "nikogrupen",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-05T03:31:04.653Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-11-05T08:14:05.854Z"
     },
     {
       "name": "Julio Pereyra",
       "handle": "ItsJulioPereyra",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:04.733Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:06.099Z"
     },
     {
       "name": "Spencer Poff",
@@ -872,7 +987,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:05.002Z"
+      "checkedAt": "2026-11-05T08:14:06.142Z"
     },
     {
       "name": "Vasudha Rengarajan",
@@ -880,31 +995,31 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-05T03:31:05.095Z"
+      "checkedAt": "2026-11-05T08:14:06.186Z"
     },
     {
       "name": "Calvin Qi",
       "handle": "calvincongelado",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:05.189Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:06.229Z"
     },
     {
       "name": "TypeSafe AI",
       "handle": "typesafeai",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-05T03:31:05.488Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-05T08:14:06.276Z"
     }
   ],
   "stats": {
-    "xBuilders": 19,
-    "totalTweets": 42,
+    "xBuilders": 21,
+    "totalTweets": 51,
     "userLookupRequests": 0,
     "userResourcesRead": 0,
     "timelineRequests": 35,
-    "tweetResourcesRead": 42
+    "tweetResourcesRead": 9
   }
 }
