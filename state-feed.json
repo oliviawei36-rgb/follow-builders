@@ -1,19 +1,5 @@
 {
   "seenTweets": {
-    "2116642586387730593": 1793491705423,
-    "2116544052267205093": 1793491705423,
-    "2116405414921384099": 1793491705868,
-    "2116569426694955345": 1793491706207,
-    "2116562421288677771": 1793491706207,
-    "2116550980749980078": 1793491706207,
-    "2116369601508593911": 1793491706930,
-    "2116652002830963114": 1793491707295,
-    "2116640529232609515": 1793491707677,
-    "2116653171741470990": 1793491707951,
-    "2116624458198982668": 1793491708310,
-    "2116554844207198501": 1793491708310,
-    "2116692529970311254": 1793499328650,
-    "2116710688550994042": 1793499329669,
     "2116957135661945283": 1793579681989,
     "2116782055665402157": 1793579682316,
     "2116773135668404286": 1793579682316,
@@ -262,7 +248,29 @@
     "2118761109524214198": 1794019856972,
     "2118895236265226693": 1794019857275,
     "2118760614491455536": 1794019857275,
-    "2118764285274828997": 1794019857818
+    "2118764285274828997": 1794019857818,
+    "2119114537442189652": 1794105089934,
+    "2119242830707311005": 1794105090239,
+    "2119210618976944259": 1794105090239,
+    "2119210582654210255": 1794105090239,
+    "2119164641301696891": 1794105090239,
+    "2119140818690974203": 1794105090239,
+    "2118953362725159104": 1794105090718,
+    "2118939076791546000": 1794105090718,
+    "2118938956301779171": 1794105090718,
+    "2119217304953053419": 1794105091599,
+    "2119126064815608270": 1794105091599,
+    "2118928276118986991": 1794105091944,
+    "2118916001152803057": 1794105091944,
+    "2119111328099168409": 1794105092325,
+    "2118953909524050288": 1794105092325,
+    "2119172824271360124": 1794105092724,
+    "2119146939514278238": 1794105092724,
+    "2119142686422859899": 1794105092724,
+    "2118951284376285508": 1794105092724,
+    "2118950671886287323": 1794105092724,
+    "2118968862557475298": 1794105093097,
+    "2118939184841052386": 1794105093097
   },
   "seenVideos": {},
   "seenArticles": {},
@@ -480,15 +488,15 @@
   },
   "xSinceIds": {
     "bcherny": "2117693181651542387",
-    "thsottiaux": "2118871902366441879",
+    "thsottiaux": "2118953362725159104",
     "petergyang": "2118869042153095422",
     "thenanyu": "2118826112562434303",
     "amandaaskell": "2111607047653634331",
-    "rauchg": "2118856239719608353",
-    "levie": "2118723097901846580",
-    "garrytan": "2118890980867023062",
+    "rauchg": "2118928276118986991",
+    "levie": "2119111328099168409",
+    "garrytan": "2119172824271360124",
     "mattturck": "2118791325394845839",
-    "zarazhangrui": "2118120795780370768",
+    "zarazhangrui": "2118968862557475298",
     "steipete": "2118492097917628704",
     "danshipper": "2118757047026028939",
     "adityaag": "2118733093230240144",
@@ -496,8 +504,8 @@
     "nikogrupen": "2118761111256465808",
     "nikunj": "2118840414853861627",
     "typesafeai": "2118764285274828997",
-    "swyx": "2118831214308262043",
-    "amasad": "2118506378440400951",
+    "swyx": "2119242830707311005",
+    "amasad": "2119217304953053419",
     "sama": "2117794005165748448",
     "claudeai": "2118403117779988744",
     "calvincongelado": "2118443662682247486",
@@ -511,23 +519,23 @@
     "alexalbert__": "2116227346869194935",
     "realmadhuguru": "2118562286256414897",
     "itsjuliopereyra": "2118895236265226693",
-    "karpathy": "2116957135661945283",
+    "karpathy": "2119114537442189652",
     "vtrengarajan": "2118411905236922787"
   },
   "lastXRequestStats": {
     "userLookupRequests": 0,
     "userResourcesRead": 0,
-    "timelineRequests": 35,
-    "tweetResourcesRead": 39
+    "timelineRequests": 21,
+    "tweetResourcesRead": 22
   },
   "lastXSourceHealth": {
     "karpathy": {
       "name": "Andrej Karpathy",
       "handle": "karpathy",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-07T02:50:51.354Z"
+      "status": "ok",
+      "count": 1,
+      "checkedAt": "2026-11-08T02:31:29.934Z"
     },
     "swyx": {
       "name": "Swyx",
@@ -535,7 +543,7 @@
       "module": "X",
       "status": "ok",
       "count": 5,
-      "checkedAt": "2026-11-07T02:50:51.453Z"
+      "checkedAt": "2026-11-08T02:31:30.239Z"
     },
     "joshwoodward": {
       "name": "Josh Woodward",
@@ -543,7 +551,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:51.730Z"
+      "checkedAt": "2026-11-08T02:31:30.522Z"
     },
     "bcherny": {
       "name": "Boris Cherny",
@@ -551,39 +559,39 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:51.804Z"
+      "checkedAt": "2026-11-08T02:31:30.614Z"
     },
     "thsottiaux": {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
       "status": "ok",
-      "count": 4,
-      "checkedAt": "2026-11-07T02:50:51.885Z"
+      "count": 3,
+      "checkedAt": "2026-11-08T02:31:30.718Z"
     },
     "petergyang": {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
-      "status": "ok",
-      "count": 4,
-      "checkedAt": "2026-11-07T02:50:52.183Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-08T02:31:31.000Z"
     },
     "thenanyu": {
       "name": "Nan Yu",
       "handle": "thenanyu",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:52.482Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-08T02:31:31.084Z"
     },
     "realmadhuguru": {
       "name": "Madhu Guru",
       "handle": "realmadhuguru",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:52.803Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-08T02:31:31.158Z"
     },
     "amandaaskell": {
       "name": "Amanda Askell",
@@ -591,7 +599,7 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:53.068Z"
+      "checkedAt": "2026-11-08T02:31:31.234Z"
     },
     "_catwu": {
       "name": "Cat Wu",
@@ -599,15 +607,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:53.135Z"
+      "checkedAt": "2026-11-08T02:31:31.311Z"
     },
     "trq212": {
       "name": "Thariq",
       "handle": "trq212",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-07T02:50:53.269Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-08T02:31:31.430Z"
     },
     "googlelabs": {
       "name": "Google Labs",
@@ -615,15 +623,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:53.537Z"
+      "checkedAt": "2026-11-08T02:31:31.505Z"
     },
     "amasad": {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-07T02:50:53.628Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-11-08T02:31:31.599Z"
     },
     "rauchg": {
       "name": "Guillermo Rauch",
@@ -631,7 +639,7 @@
       "module": "X",
       "status": "ok",
       "count": 2,
-      "checkedAt": "2026-11-07T02:50:53.732Z"
+      "checkedAt": "2026-11-08T02:31:31.944Z"
     },
     "alexalbert__": {
       "name": "Alex Albert",
@@ -639,15 +647,15 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:53.998Z"
+      "checkedAt": "2026-11-08T02:31:32.223Z"
     },
     "levie": {
       "name": "Aaron Levie",
       "handle": "levie",
       "module": "X",
       "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:54.100Z"
+      "count": 2,
+      "checkedAt": "2026-11-08T02:31:32.325Z"
     },
     "ryolu_": {
       "name": "Ryo Lu",
@@ -655,151 +663,166 @@
       "module": "X",
       "status": "no_updates",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:54.375Z"
+      "checkedAt": "2026-11-08T02:31:32.606Z"
     },
     "garrytan": {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
       "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-07T02:50:54.471Z"
+      "count": 5,
+      "checkedAt": "2026-11-08T02:31:32.724Z"
     },
     "mattturck": {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:54.760Z"
+      "status": "no_updates",
+      "count": 0,
+      "checkedAt": "2026-11-08T02:31:32.998Z"
     },
     "zarazhangrui": {
       "name": "Zara Zhang",
       "handle": "zarazhangrui",
       "module": "X",
-      "status": "no_updates",
-      "count": 0,
-      "checkedAt": "2026-11-07T02:50:55.028Z"
+      "status": "ok",
+      "count": 2,
+      "checkedAt": "2026-11-08T02:31:33.097Z"
     },
     "nikunj": {
       "name": "Nikunj Kothari",
       "handle": "nikunj",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-07T02:50:55.124Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Timeline request failed: HTTP 402",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "steipete": {
       "name": "Peter Steinberger",
       "handle": "steipete",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:55.394Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "danshipper": {
       "name": "Dan Shipper",
       "handle": "danshipper",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-07T02:50:55.561Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "adityaag": {
       "name": "Aditya Agarwal",
       "handle": "adityaag",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-07T02:50:55.860Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "sama": {
       "name": "Sam Altman",
       "handle": "sama",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:56.132Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "claudeai": {
       "name": "Claude",
       "handle": "claudeai",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:56.213Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "harvey": {
       "name": "Harvey",
       "handle": "harvey",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:56.307Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "winstonweinberg": {
       "name": "Winston Weinberg",
       "handle": "winstonweinberg",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:56.591Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "gabepereyra": {
       "name": "Gabe Pereyra",
       "handle": "gabepereyra",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:56.675Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "nikogrupen": {
       "name": "Niko Grupen",
       "handle": "nikogrupen",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-07T02:50:56.972Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "itsjuliopereyra": {
       "name": "Julio Pereyra",
       "handle": "ItsJulioPereyra",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-07T02:50:57.275Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "spencerpoff": {
       "name": "Spencer Poff",
       "handle": "spencerpoff",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:57.540Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "vtrengarajan": {
       "name": "Vasudha Rengarajan",
       "handle": "vtrengarajan",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:57.664Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "calvincongelado": {
       "name": "Calvin Qi",
       "handle": "calvincongelado",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-07T02:50:57.730Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     },
     "typesafeai": {
       "name": "TypeSafe AI",
       "handle": "typesafeai",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-07T02:50:57.818Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-08T02:31:29.715Z"
     }
   }
 }
