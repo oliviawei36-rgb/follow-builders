@@ -1,32 +1,5 @@
 {
   "seenTweets": {
-    "2116957135661945283": 1793579681989,
-    "2116782055665402157": 1793579682316,
-    "2116773135668404286": 1793579682316,
-    "2117035794678546764": 1793579682761,
-    "2116936205623611781": 1793579682761,
-    "2116936031866077423": 1793579682761,
-    "2116935821534380166": 1793579682761,
-    "2116935650511585696": 1793579682761,
-    "2116987415319740756": 1793579683061,
-    "2116946320674152810": 1793579683061,
-    "2116942122909863937": 1793579683061,
-    "2116921348459221173": 1793579683061,
-    "2116921336006410550": 1793579683061,
-    "2116977363728867664": 1793579683631,
-    "2116976789046350040": 1793579683631,
-    "2117010858845089805": 1793579683991,
-    "2116998155925360965": 1793579683991,
-    "2117039740096847920": 1793579684282,
-    "2117000819623243925": 1793579684282,
-    "2116988333096370443": 1793579684282,
-    "2116942505333993680": 1793579684282,
-    "2116937012859261242": 1793579684282,
-    "2116941191526895975": 1793579684782,
-    "2116909591607099793": 1793579684782,
-    "2117014507083948453": 1793579685371,
-    "2116978123044688304": 1793579685371,
-    "2117059131349868790": 1793586820698,
     "2117341332645826945": 1793666147020,
     "2117331535007531009": 1793666147020,
     "2117321973080760644": 1793666147020,
@@ -525,169 +498,189 @@
   "lastXRequestStats": {
     "userLookupRequests": 0,
     "userResourcesRead": 0,
-    "timelineRequests": 21,
-    "tweetResourcesRead": 22
+    "timelineRequests": 1,
+    "tweetResourcesRead": 0
   },
   "lastXSourceHealth": {
     "karpathy": {
       "name": "Andrej Karpathy",
       "handle": "karpathy",
       "module": "X",
-      "status": "ok",
-      "count": 1,
-      "checkedAt": "2026-11-08T02:31:29.934Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Timeline request failed: HTTP 402",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "swyx": {
       "name": "Swyx",
       "handle": "swyx",
       "module": "X",
-      "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-08T02:31:30.239Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "joshwoodward": {
       "name": "Josh Woodward",
       "handle": "joshwoodward",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:30.522Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "bcherny": {
       "name": "Boris Cherny",
       "handle": "bcherny",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:30.614Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "thsottiaux": {
       "name": "Thibault Sottiaux",
       "handle": "thsottiaux",
       "module": "X",
-      "status": "ok",
-      "count": 3,
-      "checkedAt": "2026-11-08T02:31:30.718Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "petergyang": {
       "name": "Peter Yang",
       "handle": "petergyang",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.000Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "thenanyu": {
       "name": "Nan Yu",
       "handle": "thenanyu",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.084Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "realmadhuguru": {
       "name": "Madhu Guru",
       "handle": "realmadhuguru",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.158Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "amandaaskell": {
       "name": "Amanda Askell",
       "handle": "AmandaAskell",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.234Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "_catwu": {
       "name": "Cat Wu",
       "handle": "_catwu",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.311Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "trq212": {
       "name": "Thariq",
       "handle": "trq212",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.430Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "googlelabs": {
       "name": "Google Labs",
       "handle": "GoogleLabs",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:31.505Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "amasad": {
       "name": "Amjad Masad",
       "handle": "amasad",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-08T02:31:31.599Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "rauchg": {
       "name": "Guillermo Rauch",
       "handle": "rauchg",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-08T02:31:31.944Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "alexalbert__": {
       "name": "Alex Albert",
       "handle": "alexalbert__",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:32.223Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "levie": {
       "name": "Aaron Levie",
       "handle": "levie",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-08T02:31:32.325Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "ryolu_": {
       "name": "Ryo Lu",
       "handle": "ryolu_",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:32.606Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "garrytan": {
       "name": "Garry Tan",
       "handle": "garrytan",
       "module": "X",
-      "status": "ok",
-      "count": 5,
-      "checkedAt": "2026-11-08T02:31:32.724Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "mattturck": {
       "name": "Matt Turck",
       "handle": "mattturck",
       "module": "X",
-      "status": "no_updates",
+      "status": "error",
       "count": 0,
-      "checkedAt": "2026-11-08T02:31:32.998Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "zarazhangrui": {
       "name": "Zara Zhang",
       "handle": "zarazhangrui",
       "module": "X",
-      "status": "ok",
-      "count": 2,
-      "checkedAt": "2026-11-08T02:31:33.097Z"
+      "status": "error",
+      "count": 0,
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "nikunj": {
       "name": "Nikunj Kothari",
@@ -695,8 +688,8 @@
       "module": "X",
       "status": "error",
       "count": 0,
-      "reason": "Timeline request failed: HTTP 402",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "reason": "Not completed: user lookup or earlier account request failed",
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "steipete": {
       "name": "Peter Steinberger",
@@ -705,7 +698,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "danshipper": {
       "name": "Dan Shipper",
@@ -714,7 +707,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "adityaag": {
       "name": "Aditya Agarwal",
@@ -723,7 +716,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "sama": {
       "name": "Sam Altman",
@@ -732,7 +725,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "claudeai": {
       "name": "Claude",
@@ -741,7 +734,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "harvey": {
       "name": "Harvey",
@@ -750,7 +743,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "winstonweinberg": {
       "name": "Winston Weinberg",
@@ -759,7 +752,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "gabepereyra": {
       "name": "Gabe Pereyra",
@@ -768,7 +761,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "nikogrupen": {
       "name": "Niko Grupen",
@@ -777,7 +770,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "itsjuliopereyra": {
       "name": "Julio Pereyra",
@@ -786,7 +779,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "spencerpoff": {
       "name": "Spencer Poff",
@@ -795,7 +788,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "vtrengarajan": {
       "name": "Vasudha Rengarajan",
@@ -804,7 +797,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "calvincongelado": {
       "name": "Calvin Qi",
@@ -813,7 +806,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     },
     "typesafeai": {
       "name": "TypeSafe AI",
@@ -822,7 +815,7 @@
       "status": "error",
       "count": 0,
       "reason": "Not completed: user lookup or earlier account request failed",
-      "checkedAt": "2026-11-08T02:31:29.715Z"
+      "checkedAt": "2026-11-09T02:41:51.470Z"
     }
   }
 }
