@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T04:38:22.179Z",
+  "generatedAt": "2026-11-11T02:50:14.698Z",
   "lookbackHours": 72,
   "blogs": [],
   "sourceHealth": [
@@ -9,7 +9,7 @@
       "status": "error",
       "count": 0,
       "reason": "Blog: Article index could not be parsed for Anthropic Engineering",
-      "checkedAt": "2026-11-10T04:38:22.180Z"
+      "checkedAt": "2026-11-11T02:50:14.698Z"
     },
     {
       "name": "Claude Blog",
@@ -17,7 +17,7 @@
       "status": "error",
       "count": 0,
       "reason": "Blog: Article index could not be parsed for Claude Blog",
-      "checkedAt": "2026-11-10T04:38:22.180Z"
+      "checkedAt": "2026-11-11T02:50:14.698Z"
     }
   ],
   "stats": {
