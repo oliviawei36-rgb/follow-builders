@@ -2,27 +2,27 @@
   "__coverage": {
     "中国大模型｜Z.ai 官方模型发布": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:54.675Z",
+      "checkedAt": "2026-11-21T03:59:28.356Z",
       "lookbackDays": 14
     },
     "TypeSafe AI 官方博客": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:54.674Z",
+      "checkedAt": "2026-11-21T03:59:28.355Z",
       "lookbackDays": 14
     },
     "Spellbook Blog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:54.951Z",
+      "checkedAt": "2026-11-21T03:59:28.913Z",
       "lookbackDays": 14
     },
     "Legora Blog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-19T04:14:05.361Z",
+      "checkedAt": "2026-11-21T03:59:28.358Z",
       "lookbackDays": 14
     },
     "美国法律实务｜LawSites / LawNext": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:55.872Z",
+      "checkedAt": "2026-11-21T03:59:30.019Z",
       "lookbackDays": 14
     },
     "中国大模型｜智谱 AutoClaw 英文": {
@@ -32,42 +32,42 @@
     },
     "美国法律实务｜Artificial Lawyer": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:56.299Z",
+      "checkedAt": "2026-11-21T03:59:30.229Z",
       "lookbackDays": 14
     },
     "美国企业法务｜CLOC": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.078Z",
+      "checkedAt": "2026-11-21T03:59:30.685Z",
       "lookbackDays": 14
     },
     "OpenAI ChatGPT and Codex Changelog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.219Z",
+      "checkedAt": "2026-11-21T03:59:31.038Z",
       "lookbackDays": 14
     },
     "美国企业法务｜ACC": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.131Z",
+      "checkedAt": "2026-11-21T03:59:30.894Z",
       "lookbackDays": 14
     },
     "OpenAI Codex Releases": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.310Z",
+      "checkedAt": "2026-11-21T03:59:31.068Z",
       "lookbackDays": 14
     },
     "Claude Code Changelog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.665Z",
+      "checkedAt": "2026-11-21T03:59:31.215Z",
       "lookbackDays": 14
     },
     "Claude Code Releases": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.955Z",
+      "checkedAt": "2026-11-21T03:59:31.303Z",
       "lookbackDays": 14
     },
     "Claude Code Desktop Changelog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:58.003Z",
+      "checkedAt": "2026-11-21T03:59:31.780Z",
       "lookbackDays": 14
     },
     "中国大模型｜智谱 AutoClaw": {
@@ -77,12 +77,12 @@
     },
     "中国大模型｜DeepSeek 官方动态": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:58.582Z",
+      "checkedAt": "2026-11-21T03:59:32.607Z",
       "lookbackDays": 14
     },
     "Claude Code What's New": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:57.344Z",
+      "checkedAt": "2026-11-21T03:59:31.086Z",
       "lookbackDays": 14
     },
     "LexisNexis Insights": {
@@ -92,45 +92,45 @@
     },
     "Harvey Blog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:54.678Z",
+      "checkedAt": "2026-11-21T03:59:28.358Z",
       "lookbackDays": 14
     },
     "中国大模型｜火山方舟与豆包": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:58.703Z",
+      "checkedAt": "2026-11-21T03:59:33.082Z",
       "lookbackDays": 14
     },
     "Anthropic Newsroom": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:58.239Z",
+      "checkedAt": "2026-11-21T03:59:31.822Z",
       "lookbackDays": 14
     },
     "Thomson Reuters CoCounsel": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:54.681Z",
+      "checkedAt": "2026-11-21T03:59:28.359Z",
       "lookbackDays": 14
     },
     "中国大模型｜腾讯混元": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:58.607Z",
+      "checkedAt": "2026-11-21T03:59:33.039Z",
       "lookbackDays": 14
     },
     "中国大模型｜Kimi 官方资讯": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:58.357Z",
+      "checkedAt": "2026-11-21T03:59:32.165Z",
       "lookbackDays": 14
     },
     "LegalOn Blog": {
       "initialComplete": true,
-      "checkedAt": "2026-11-20T03:59:55.245Z",
+      "checkedAt": "2026-11-21T03:59:29.002Z",
       "lookbackDays": 14
     }
   },
   "中国大模型｜Z.ai 官方模型发布": "1d077cfe32cff02e40030e6c5ffdd116e2df18592176654178e3f177cb1dc9ec",
   "OpenAI ChatGPT and Codex Changelog": "5752947eba6a74ecaf1277890de23b8b56548813cf2195a5dc4625697c908886",
   "Claude Code What's New": "216f796132aaf1be9bea8d447e1a505f61f4003a3f2f000c93cc6531623c69b9",
-  "Claude Code Changelog": "ad2b2120b17e34ded4fcb7b314f56840b1b48261b186a0c960ca8d26c21e078e",
-  "Claude Code Desktop Changelog": "31b9d7410c0c12b49fe19ddf754e8cc113b337b997ab78baac6ec8985f697748",
+  "Claude Code Changelog": "5c587d942c751ea3abb0fca50e93d60302f619d8b210043c0b4e81dd9122703b",
+  "Claude Code Desktop Changelog": "c6500f9b52e9944fa91376025c13d50914ccd72d15103cec6a0a2b012b74bb56",
   "中国大模型｜火山方舟与豆包": "07dab8c2e3a86196bf10d38d6b74dc2578d0153b367cc7a705ae9463761ccdeb",
   "中国大模型｜腾讯混元": "125964ab722de45da327d88a75e5b4309290f4cd2dcace900c387d8168b15232"
 }
